@@ -1,12 +1,16 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Startsida</title>
+        <title>Agilis</title>
         <meta charset="utf-8">
         <link href="/static/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <!-- Inkluderar vårt egna JavaScript-dokument -->
+        <script src="script.js" defer></script>
     </head>
     <body>
+
         <div id="wrapper">
             <header>
                 <h1>Agilis</h1>
@@ -16,10 +20,95 @@
                 <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker! <br>
                 Registrera dig hos oss idag!    
                 </p>
+
+                <div class="form">
+
+                        <ul class="tab-group">
+                        <li class="tab active"><a href="#signup">Sign Up</a></li>
+                        <li class="tab"><a href="#login">Log In</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                        <div id="signup">   
+                            <h1>Sign Up for Free</h1>
+                            
+                            <form action="/" method="post">
+                            
+                            <div class="top-row">
+                            <div class="field-wrap">
+                                <label>
+                                First Name<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="off" />
+                            </div>
+                        
+                            <div class="field-wrap">
+                                <label>
+                                Last Name<span class="req">*</span>
+                                </label>
+                                <input type="text"required autocomplete="off"/>
+                            </div>
+                            </div>
+                
+                            <div class="field-wrap">
+                            <label>
+                                Email Address<span class="req">*</span>
+                            </label>
+                            <input type="email"required autocomplete="off"/>
+                            </div>
+                            
+                            <div class="field-wrap">
+                            <label>
+                                Set A Password<span class="req">*</span>
+                            </label>
+                            <input type="password"required autocomplete="off"/>
+                            </div>
+                            
+                            <button type="submit">
+                                <a href="profil.html" class="button button-block"/>Get Started</a>
+                            </button>
+
+                            
+                            </form>
+                
+                        </div>
+                        
+                        <div id="login">   
+                            <h1>Welcome Back!</h1>
+                            
+                            <form action="/" method="post">
+                            
+                            <div class="field-wrap">
+                            <label>
+                                Email Address<span class="req">*</span>
+                            </label>
+                            <input type="email"required autocomplete="off"/>
+                            </div>
+                            
+                            <div class="field-wrap">
+                            <label>
+                                Password<span class="req">*</span>
+                            </label>
+                            <input type="password"required autocomplete="off"/>
+                            </div>
+                            
+                            <p class="forgot"><a href="#">Forgot Password?</a></p>
+                            
+                            <button type="submit">
+                                <a href="login.html" class="button button-block"/>Log In</a>
+                            </button>
+                            
+                            </form>
+                
+                        </div>
+                        
+                        </div><!-- tab-content -->
+                        
+                </div> <!-- /form -->
             </main>
             <footer>
                 <p>@AgilisAB</p>
             </footer>
-        </div>
+
     </body>
 </html>
