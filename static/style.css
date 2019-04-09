@@ -1,0 +1,43 @@
+body {
+    font-family: 'Work Sans', 'sans-serif';
+    margin: 0;
+    color: rgb(0, 83, 128);
+}
+
+#wrapper {
+    margin: 1px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 100% auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+
+}
+
+header {
+    width: 99.98%;
+    margin: auto;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 1px 1px 1px rgb(201, 201, 201);
+}
+
+header > h1 {
+    padding-left: 7%;
+    font-size: 50px;
+}
+
+main {
+    margin: auto;
+    width: 80%;
+    border: 1px solid rgb(206, 206, 206);
+    padding: 5%;
+}
+
+footer {
+    border-top:1px solid rgb(206, 206, 206);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
