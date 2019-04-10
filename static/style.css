@@ -20,10 +20,33 @@ body {
     float: right;
     margin-right: 80px;
     text-align: center;
-    border: 1px solid rgb(206, 206, 206);
+    border: 2px solid rgb(206, 206, 206);
     padding: 50px;
     padding-top: 20px;
     margin-top: 30px;
+}
+
+.main_one {
+    display: flex;
+    text-align: center;
+    margin: 0px;
+    flex-direction: column-reverse;
+}
+  
+.nav_one {
+    background: rgb(147, 115, 151);
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+  
+aside {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 
 #signup {
@@ -31,7 +54,7 @@ body {
     float: left;
     margin-left: 80px;
     text-align: center;
-    border: 1px solid rgb(206, 206, 206);
+    border: 2px solid rgb(206, 206, 206);
     padding: 50px;
     padding-top: 20px;
     margin-top: 30px;
@@ -87,20 +110,3 @@ footer {
     margin: auto;
     text-align: center;
 }
-
-.button {
-    background-color: rgb(13, 89, 130);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-  .button:hover {
-    background-color: white;
-    color:rgb(13, 89, 130);
