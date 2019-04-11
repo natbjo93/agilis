@@ -2,7 +2,7 @@ from bottle import route, run, template, static_file
 
 @route("/")
 def index():
-    return template("index", root="static")
+    return template("profil", root="static")
 
 @route("/static/<filename>")
 def server_static(filename):
