@@ -33,7 +33,7 @@ body {
     flex-direction: column-reverse;
 }
   
-.nav_one {
+#nav_one {
     background: rgb(147, 115, 151);
     display: flex;
     flex-direction: row;
