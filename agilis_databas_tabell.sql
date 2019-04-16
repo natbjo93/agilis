@@ -38,7 +38,7 @@ create table sparastill
 
 insert into profil values
 ('petra.svensson@live.se', 'CV', 'Petra', 'Svensson', 'lösen'),
-('ronja.nackblad@hotmail.com', 'CV', 'Ronja', 'Näckblad', 'ronja'),
+('fo', 'CV', 'Ronja', 'Näckblad', 'ronja'),
 ('nathaliebjornsson@hotmail.com', 'CV', 'Nathalie', 'Björnsson', 'lösen'),
 ('patchanasirini@gmai.com', 'CV', 'Patchana', 'Sirini', 'lösen'),
 ('anasm.abdullai@hotmail.com', 'CV', 'Anas', 'Abdullai', 'lösen');

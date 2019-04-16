@@ -23,11 +23,20 @@ def check_login():
     else:
         print("fel")
 
+@route("/register", method="POST")
+def register():
+    first_name = getattr(request.forms ,"first_name")
+    last_name = getattr(request.forms, "last_name")
+    email = getattr(request.forms, "email")
+    password = getattr(request.forms, "password")
+    cursor.execute("insert into profil(email, fnamn, Enamn, losen) values ('" + (email) + "', '" + (first_name) + "', '" + (last_name) + "', '" + (password) + "')")
+    conn.commit()
+    return template("index")
 
 
 @route("/profil")
 def profil():
     return template("profil", root="static")
 
-run(host="localhost", port=9999)
+run(host="localhost", port=9000)
 

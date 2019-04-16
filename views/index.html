@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link href="static/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <script src="static/script.js"></script>
     </head>
     <body>
 
@@ -15,20 +16,39 @@
             <main>
                 <h2>För dig som söker jobb</h2>
                 <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker! <br>
-                Registrera dig hos oss idag!    
+                    Registrera dig hos oss idag!    
                 </p>
-                    <h1>Log in</h1>
+                <h1>Log in</h1>
+                <div id="whole_form">
                     <form id="login_form" action="/check_login" method="POST">
                         <label for="username">Användarnamn</label>
                         <input type="text" id="username" name="username">
-                        <label for="password">Lösenord</label>
-                        <input type="text" id="password" name="password">
+                        <label for="password" >Lösenord</label>
+                        <input type="password" id="password" name="password">
+                        <div>
+                            <input type="checkbox" onclick="asterixPassword()">Show Password
+                        </div>
                         <input class="save btn" type="submit" value="Logga in">
                     </form>
+                    <form id="register_form" action="/register" method="POST">
+                        <label for="first_name">Namn:</label>
+                        <input type="text" id="first_name" name="first_name">
+                        <label for="last_name" >Efternamn:</label>
+                        <input type="text" id="last_name" name="last_name">
+                        <label for="email" >Email:</label>
+                        <input type="text" id="email" name="email">
+                        <label for="password" >Lösenord:</label>
+                        <input type="password" id="password2" name="password">
+                        <div>
+                            <input type="checkbox" onclick="asterixPassword2()">Show Password
+                        </div>
+                        <input class="register_btn" type="submit" value="Registrera">
+                    </form>
+                </div>
             </main>
             <footer>
                 <p>@AgilisAB</p>
             </footer>
-
+        </div>
     </body>
 </html>
