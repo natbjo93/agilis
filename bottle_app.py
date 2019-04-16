@@ -1,4 +1,8 @@
-from bottle import route, run, template, static_file
+from bottle import route, run, template, static_file, request
+
+import psycopg2
+conn = psycopg2.connect(dbname="ai9707", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
+cursor = conn.cursor()
 
 @route("/")
 def index():
@@ -8,9 +12,22 @@ def index():
 def server_static(filename):
     return static_file(filename, root="static")
 
+@route("/check_login", method="POST")
+def check_login():
+    username = getattr(request.forms ,"username")
+    password = getattr(request.forms, "password")
+    cursor.execute("select losen from profil where email= '" + (username) + "'")
+    database_password = cursor.fetchall()
+    if database_password[0][0] == password:
+        return template("profil")
+    else:
+        print("fel")
+
+
+
 @route("/profil")
 def profil():
     return template("profil", root="static")
 
-run(host="localhost", port=8080)
+run(host="localhost", port=9999)
 
