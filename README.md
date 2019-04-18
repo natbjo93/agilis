@@ -1,9 +1,3 @@
 # Agilis
 ## Installation
-Placeholder
-## Detta är vi
-blablabla
-## Varför
-blbalbal
-## heeeej ppp
-jajsjaaaa
+Ni måste ha bottle och psycopg2 för att kunan köra koden korrekt
