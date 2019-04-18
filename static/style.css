@@ -1,5 +1,4 @@
 /* WHOLE WEBSITE */
-
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
@@ -14,7 +13,6 @@ body {
     "header"
     "main"
     "footer"
-
 }
 
 /* HEADER */ 
@@ -31,33 +29,30 @@ header > h1 {
     font-size: 50px;
 }
 
-/* ÄR DETTA NAV? */
-
+/* NAV */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color:rgb(2, 64, 97);
-  }
+}
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color:rgba(250, 249, 249, 0.171);
-   
-  }
+li {
+float: left;
+}
 
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color:rgba(250, 249, 249, 0.171);
+}
 
 /* MAIN */ 
 main {
@@ -69,7 +64,6 @@ main {
 }
 
 /* LOG IN AND REGISTER */
-
 #whole_form {
     display: flex;
     flex-flow: row;
@@ -86,7 +80,6 @@ main {
     width: 100%;
     margin: 2%;
     border-radius: 1%;
-
 }
 
 #register_form > label, input{

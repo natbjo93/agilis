@@ -8,7 +8,7 @@ function asterixPassword() {
 }
 
 function asterixPassword2() {
-  var x = document.getElementById("password2");
+  var x = document.getElementById("password_2");
   if (x.type === "password") {
     x.type = "text";
   } else {

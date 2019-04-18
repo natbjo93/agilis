@@ -18,10 +18,18 @@ def check_login():
     password = getattr(request.forms, "password")
     cursor.execute("select losen from profil where email= '" + (username) + "'")
     database_password = cursor.fetchall()
-    if database_password[0][0] == password:
-        return template("profil")
-    else:
-        print("fel")
+    try:
+        if database_password[0][0] == password:
+            return template("profil")
+        else:
+            return template("index")
+    except:
+        print(database_password)
+        if database_password[0] == password:
+            return template("profil")
+        else:
+            return template("index")
+
 
 @route("/register", method="POST")
 def register():
@@ -32,7 +40,6 @@ def register():
     cursor.execute("insert into profil(email, fnamn, Enamn, losen) values ('" + (email) + "', '" + (first_name) + "', '" + (last_name) + "', '" + (password) + "')")
     conn.commit()
     return template("index")
-
 
 @route("/profil")
 def profil():
