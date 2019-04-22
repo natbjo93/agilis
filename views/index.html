@@ -4,32 +4,35 @@
         <title>Agilis</title>
         <meta charset="utf-8">
         <link href="static/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
         <script src="static/script.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <header>
                 <h1>AGILIS</h1>
+                <p>- Ge dig själv mer tid till annat</p>
             </header>
             <main>
                 <h2>För dig som söker jobb</h2>
                 <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker! <br>
                     Registrera dig hos oss idag!    
                 </p>
-                <h1>Log in</h1>
                 <div id="whole_form">
                     <form id="login_form" action="/check_login" method="POST">
-                        <label for="username">Användarnamn</label>
+                        <p>Redan medlem? Logga in</p>
+                        <label for="username">Email:</label>
                         <input type="text" id="username" name="username">
-                        <label for="password" >Lösenord</label>
+                        <label for="password" >Lösenord:</label>
                         <input type="password" id="password" name="password">
                         <div>
-                            <input type="checkbox" onclick="asterixPassword()">Show Password
+                            <input type="checkbox" onclick="asterixPassword()">
+                            <p>Visa lösenord</p>
                         </div>
                         <input class="save btn" type="submit" value="Logga in">
                     </form>
                     <form id="register_form" action="/register" method="POST">
+                        <p>Registrera dig för att komma igång och söka jobb!</p>
                         <label for="first_name">Namn:</label>
                         <input type="text" id="first_name" name="first_name">
                         <label for="last_name" >Efternamn:</label>
@@ -39,7 +42,7 @@
                         <label for="password" >Lösenord:</label>
                         <input type="password" id="password_2" name="password">
                         <div>
-                            <input type="checkbox" onclick="asterixPassword2()">Show Password
+                            <label><input type="checkbox" onclick="asterixPassword2()">Visa lösenord</label>
                         </div>
                         <input class="register_btn" type="submit" value="Registrera">
                     </form>
