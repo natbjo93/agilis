@@ -1,3 +1,5 @@
 # Agilis
 ## Installation
-Ni måste ha bottle och psycopg2 för att kunan köra koden korrekt
+Requierments: 
+1. cd to the directory where requirements.txt is located.
+2. run: pip3 install -r requirements.txt in your terminal/shell.
