@@ -1,8 +1,19 @@
 from bottle import route, run, template, static_file, request
+import json
 
 import psycopg2
 conn = psycopg2.connect(dbname="ai9707", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
+
+import requests
+
+def api_response():
+    res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=10', headers={'Accept-language': 'application/json'})
+    if res.status_code != 200:
+        raise Exception("ERROR")
+    api_res = json.dumps(res.json())
+    return api_res
+    # print(test)
 
 @route("/")
 def index():
@@ -43,7 +54,8 @@ def register():
 
 @route("/profil")
 def profil():
-    return template("profil", root="static")
+    # api_response()
+    return template("profil", root="static", api_response=api_response())
 
-run(host="localhost", port=9000)
+run(host="localhost", port=8000)
 
