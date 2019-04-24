@@ -55,11 +55,11 @@ $(function () {
     });
     $('#lan').fadeOut('slow', function() {
       $(this).text(jobList[idx].lan).fadeIn('slow');
-      
       idx++;
+
       $('#annonsid').data('currentIndex', idx);
     });
-
+  
   
   });
 });

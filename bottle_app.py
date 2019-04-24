@@ -41,7 +41,6 @@ def check_login():
         else:
             return template("index")
 
-
 @route("/register", method="POST")
 def register():
     first_name = getattr(request.forms ,"first_name")
@@ -56,6 +55,10 @@ def register():
 def profil():
     # api_response()
     return template("profil", root="static", api_response=api_response())
+
+@route("/kontakt")
+def kontakt():
+    return template("kontakt", root="static")
 
 run(host="localhost", port=8000)
 

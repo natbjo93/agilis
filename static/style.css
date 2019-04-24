@@ -21,7 +21,7 @@ body {
 header {
     border-bottom: 1px solid rgba(12, 12, 12, 0.338);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: blue;
+    background-color: lightgray;
 }
 
 header > h1 {
@@ -63,7 +63,6 @@ main {
     width: 90%;
     border: 1px solid rgb(206, 206, 206);
     padding: 5%;
-
     background-image: url("index_background.jpg");
     background-position: center;
     background-size: cover;
