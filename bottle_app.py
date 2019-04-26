@@ -60,5 +60,13 @@ def profil():
 def kontakt():
     return template("kontakt", root="static")
 
+@route("/info")
+def kontakt():
+    return template("info", root="static")
+
+@route("/sokjobb")
+def kontakt():
+    return template("sokjobb", root="static")
+
 run(host="localhost", port=8000)
 
