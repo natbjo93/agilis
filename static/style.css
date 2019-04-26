@@ -20,8 +20,8 @@ body {
 /* HEADER */ 
 header {
     border-bottom: 1px solid rgba(12, 12, 12, 0.338);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: lightgray;
+    box-shadow: 0 4px 8px 0 rgba(167, 91, 91, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(147, 169, 184);
 }
 
 header > h1 {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Agilis Sök jobb</title>
+        <title>Agilis kontakta oss</title>
         <meta charset="utf-8">
         <link href="static/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
@@ -27,8 +27,15 @@
                 <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker! <br>
                     Registrera dig hos oss idag!    
                 </p>
-               <h3>Här ska du som är inne på vår sida kunna söka jobb inom olika kateogorier.</h3>
-               <p>Sidan är fortfarande under arbete men snart är den färdig :-) .</p>
+               <h3>Är det något som du undrar över kontakta gärna Agilis!</h3>
+               <div class="form"> 
+                <form id="form" method="post" action="">
+                    <input name="name" type="text" class="fält" placeholder="Ditt Namn" required> <br>
+                    <input name="email" type="email" class="fält" placeholder="Din E-post" required><br>
+                    <textarea name="message" class="fält" placeholder="Meddelande" rows= "5" required></textarea><br>
+                    <input type="submit" class="skicka" value="Skicka Meddelande" required>
+                </form>
+            </div>
             </main>
             <footer>
                 <p>@AgilisAB</p>
