@@ -56,9 +56,9 @@ def profil():
     # api_response()
     return template("profil", root="static", api_response=api_response())
 
-@route("/nykontakt")
+@route("/kontakt")
 def kontakt():
-    return template("nykontakt", root="static")
+    return template("kontakt", root="static")
 
 @route("/info")
 def kontakt():
