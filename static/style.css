@@ -39,6 +39,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color:rgb(2, 64, 97);
+    border-block-end: 0px;
 }
   
 li {
