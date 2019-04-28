@@ -39,13 +39,13 @@ $(function () {
     if (idx === undefined) {
       idx = 0;
     }
-    console.log(jobList);
-    $('#annonsid, #annonsnamn, #kommunnamn, #lan').fadeOut('slow', function() {
+     console.log(jobList);
+     $('#annonsid, #annonsnamn, #kommunnamn, #lan').fadeOut('slow', function() {
       $(this).text(jobList[idx].annonsid).fadeIn('slow');
-      // idx = (idx <= (jobList.length - 2)) ? (idx + 1) : 0;
+      idx = (idx <= (jobList.length - 2)) ? (idx + 1) : 0;
 
       // enable button because the operation is now completed
-      $("#btn1").removeProp('disabled');
+     $("#btn1").removeProp('disabled');
     });
     $('#annonsnamn').fadeOut('slow', function() {
       $(this).text(jobList[idx].annonsrubrik).fadeIn('slow');
