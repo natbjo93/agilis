@@ -100,8 +100,9 @@ $(function () {
     });
     $('#lan').fadeOut('slow', function() {
       $(this).text(jobList[idx].lan).fadeIn('slow');
-      idx++;
 
+      //Denna del under måste sitta på sista anropsparagrafen
+      idx++;
       $('#annonsid').data('currentIndex', idx);
     });
   
