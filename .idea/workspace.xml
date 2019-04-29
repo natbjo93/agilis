@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="" />
-=======
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profil.html" afterDir="false" />
     </list>
->>>>>>> eaef9c12d5163432ae990cae2ad85bf90020fa64
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +338,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1232" height="725" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25598678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
