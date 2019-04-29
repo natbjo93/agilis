@@ -62,7 +62,8 @@ $(function () {
            error: function(error) {
              console.log('error', error)
            }
-        });  
+        });
+      }});
 
     console.log(jobList);
     $('#annonsid, #annonsnamn, #kommunnamn, #lan, #anstallningstyp, #publiceraddatum, #sista_ansokningsdag').fadeOut('slow', function() {
@@ -89,7 +90,6 @@ $(function () {
     });
     $('#sista_ansokningsdag').fadeOut('slow', function() {
       $(this).text(jobList[idx].sista_ansokningsdag).fadeIn('slow');
-    });
 
       //Denna del under måste sitta på sista anropsparagrafen
       idx++;

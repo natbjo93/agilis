@@ -51,7 +51,7 @@ def register():
     return template("index")
 
 @route("/sokjobb")
-def profil():
+def sok_jobb():
     # api_response()
     return template("sokjobb", root="static", api_response=api_response())
 
