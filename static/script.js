@@ -63,29 +63,9 @@ $(function () {
              console.log('error', error)
            }
         });  
-        console.log(jobList);
-        $('#annonsid, #annonsnamn, #kommunnamn').fadeOut('slow', function() {
-          $(this).text(result.platsannons.annons.annonstext).fadeIn('slow');
-    
-          $("#btn1").removeProp('disabled');
-        });
-        $('#annonsnamn').fadeOut('slow', function() {
-          $(this).text(jobList[idx].annonsrubrik).fadeIn('slow');
-        });
-        $('#kommunnamn').fadeOut('slow', function() {
-          $(this).text(jobList[idx].kommunnamn).fadeIn('slow');
-        });
-        $('#lan').fadeOut('slow', function() {
-          $(this).text(jobList[idx].lan).fadeIn('slow');
-          idx++;
-    
-          $('#annonsid').data('currentIndex', idx);
-        });
-      }
-    })
 
     console.log(jobList);
-    $('#annonsid, #annonsnamn, #kommunnamn, #lan').fadeOut('slow', function() {
+    $('#annonsid, #annonsnamn, #kommunnamn, #lan, #anstallningstyp, #publiceraddatum, #sista_ansokningsdag').fadeOut('slow', function() {
       $(this).text(jobList[idx].annonsid).fadeIn('slow');
       // idx = (idx <= (jobList.length - 2)) ? (idx + 1) : 0;
 
@@ -100,6 +80,16 @@ $(function () {
     });
     $('#lan').fadeOut('slow', function() {
       $(this).text(jobList[idx].lan).fadeIn('slow');
+    });
+    $('#anstallningstyp').fadeOut('slow', function() {
+      $(this).text(jobList[idx].anstallningstyp).fadeIn('slow');
+    });
+    $('#publiceraddatum').fadeOut('slow', function() {
+      $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
+    });
+    $('#sista_ansokningsdag').fadeOut('slow', function() {
+      $(this).text(jobList[idx].sista_ansokningsdag).fadeIn('slow');
+    });
 
       //Denna del under måste sitta på sista anropsparagrafen
       idx++;

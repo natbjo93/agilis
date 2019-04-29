@@ -13,7 +13,6 @@ def api_response():
         raise Exception("ERROR")
     api_res = json.dumps(res.json())
     return api_res
-    # print(test)
 
 @route("/")
 def index():
@@ -51,10 +50,10 @@ def register():
     conn.commit()
     return template("index")
 
-@route("/profil")
+@route("/sokjobb")
 def profil():
     # api_response()
-    return template("profil", root="static", api_response=api_response())
+    return template("sokjobb", root="static", api_response=api_response())
 
 @route("/kontakt")
 def kontakt():
@@ -64,9 +63,9 @@ def kontakt():
 def kontakt():
     return template("info", root="static")
 
-@route("/sokjobb")
+@route("/profil")
 def kontakt():
-    return template("sokjobb", root="static")
+    return template("profil", root="static")
 
 run(host="localhost", port=9090)
 
