@@ -67,5 +67,5 @@ def kontakt():
 def kontakt():
     return template("profil", root="static")
 
-run(host="localhost", port=9090)
+run(host="localhost", port=9091)
 

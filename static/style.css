@@ -73,6 +73,9 @@ main {
     height: 100%;
 }
 
+p {
+    white-space: pre-wrap;
+}
 /* LOG IN AND REGISTER */
 #whole_form {
     display: flex;

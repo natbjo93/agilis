@@ -48,21 +48,11 @@ $(function () {
       url: url,
       type: "GET",
       success: function(result) {
-        $.ajax(
-          { url: url_2,
-            type: "GET",
-            success: function(returnData) { 
-
-              // Jquery find <mytag attribute="foo">...</mytag> and store it in mydata
-              const mydata = $(returnData).find('div[class="text"]');
-              // Insert into current page to somewhere with class="after-me"
-              console.log(mydata.innerHtml())
-              $('#lan').load(mydata);
-           },
-           error: function(error) {
-             console.log('error', error)
-           }
+        $('#publiceraddatum').fadeOut('slow', function() {
+          // console.log(result.platsannons.annons.annonstext)
+          $(this).text(result.platsannons.annons.annonstext).fadeIn('slow');
         });
+        
       }});
 
     console.log(jobList);
@@ -85,9 +75,12 @@ $(function () {
     $('#anstallningstyp').fadeOut('slow', function() {
       $(this).text(jobList[idx].anstallningstyp).fadeIn('slow');
     });
-    $('#publiceraddatum').fadeOut('slow', function() {
-      $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
-    });
+    // $('#publiceraddatum').fadeOut('slow', function() {
+    //   $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
+    // });
+    // $('#publiceraddatum').fadeOut('slow', function() {
+    //   $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
+    // });
     $('#sista_ansokningsdag').fadeOut('slow', function() {
       $(this).text(jobList[idx].sista_ansokningsdag).fadeIn('slow');
 
