@@ -16,8 +16,6 @@ function asterixPassword2() {
   }
 }
 
-var array1=["word1" , "word2" , "word3" , "word4" , "word5" , "word6" ];
-
 var v="{{=api_response}}";
 console.log(v);
 
@@ -35,60 +33,33 @@ $(function () {
     jobList = apiResponseObject.matchningslista.matchningdata;
 
     // use data-currentIndex to store the local variable i
-    var idx = $('#annonsid').data('currentIndex');
+    var idx = $('#annonsrubrik').data('currentIndex');
     if (idx === undefined) {
       idx = 0;
     }
 
     const url = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + jobList[idx].annonsid;
-
-    const url_2 = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + jobList[idx].annonsid + '/typ=html?lang=SV';
+    console.log(apiResponseObject)
 
     $.ajax({
       url: url,
       type: "GET",
       success: function(result) {
-        $('#publiceraddatum').fadeOut('slow', function() {
-          // console.log(result.platsannons.annons.annonstext)
+        $('#annonsrubrik').fadeOut('slow', function() {
+          $(this).text(result.platsannons.annons.annonsrubrik).fadeIn('slow');
+        });
+        $('#yrkesbenamning').fadeOut('slow', function() {
+          $(this).text(result.platsannons.annons.yrkesbenamning).fadeIn('slow');
+        });
+        $('#annonstext').fadeOut('slow', function() {
           $(this).text(result.platsannons.annons.annonstext).fadeIn('slow');
         });
-        
+        $('#kommunnamn').fadeOut('slow', function() {
+          $(this).text(result.platsannons.annons.kommunnamn).fadeIn('slow');
+          idx++;
+          $('#annonsrubrik').data('currentIndex', idx);
+          $("#btn1").removeProp('disabled');
+        });
       }});
-
-    console.log(jobList);
-    $('#annonsid, #annonsnamn, #kommunnamn, #lan, #anstallningstyp, #publiceraddatum, #sista_ansokningsdag').fadeOut('slow', function() {
-      $(this).text(jobList[idx].annonsid).fadeIn('slow');
-      // idx = (idx <= (jobList.length - 2)) ? (idx + 1) : 0;
-
-      // enable button because the operation is now completed
-      $("#btn1").removeProp('disabled');
-    });
-    $('#annonsnamn').fadeOut('slow', function() {
-      $(this).text(jobList[idx].annonsrubrik).fadeIn('slow');
-    });
-    $('#kommunnamn').fadeOut('slow', function() {
-      $(this).text(jobList[idx].kommunnamn).fadeIn('slow');
-    });
-    $('#lan').fadeOut('slow', function() {
-      $(this).text(jobList[idx].lan).fadeIn('slow');
-    });
-    $('#anstallningstyp').fadeOut('slow', function() {
-      $(this).text(jobList[idx].anstallningstyp).fadeIn('slow');
-    });
-    // $('#publiceraddatum').fadeOut('slow', function() {
-    //   $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
-    // });
-    // $('#publiceraddatum').fadeOut('slow', function() {
-    //   $(this).text(jobList[idx].publiceraddatum).fadeIn('slow');
-    // });
-    $('#sista_ansokningsdag').fadeOut('slow', function() {
-      $(this).text(jobList[idx].sista_ansokningsdag).fadeIn('slow');
-
-      //Denna del under måste sitta på sista anropsparagrafen
-      idx++;
-      $('#annonsid').data('currentIndex', idx);
-    });
-  
-  
   });
 });

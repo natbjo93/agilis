@@ -8,10 +8,11 @@ cursor = conn.cursor()
 import requests
 
 def api_response():
-    res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=10', headers={'Accept-language': 'application/json'})
+    res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=100', headers={'Accept-language': 'application/json'})
     if res.status_code != 200:
         raise Exception("ERROR")
     api_res = json.dumps(res.json())
+    print(api_res)
     return api_res
 
 @route("/")
@@ -52,7 +53,6 @@ def register():
 
 @route("/sokjobb")
 def sok_jobb():
-    # api_response()
     return template("sokjobb", root="static", api_response=api_response())
 
 @route("/kontakt")
@@ -60,12 +60,13 @@ def kontakt():
     return template("kontakt", root="static")
 
 @route("/info")
-def kontakt():
+def info():
     return template("info", root="static")
 
 @route("/profil")
-def kontakt():
+def profil():
     return template("profil", root="static")
+
 
 run(host="localhost", port=9091)
 
