@@ -67,6 +67,18 @@ def info():
 def profil():
     return template("profil", root="static")
 
+@route('/cv_personligt_brev')
+def cv():
+    return template("cv_personligt_brev", root="static")
+
+@route('./sparade_cv_pb')
+def sparade_cv_pb():
+    title = request.forms.get("title")
+    text = request.forms.get("text")
+    agilis_file = open("storage/"+title+".txt","w")
+    agilis_file.write(text)
+    agilis_file.close()
+    return template("sparade_cv_pb", root="static")
 
 run(host="localhost", port=9093)
 

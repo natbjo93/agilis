@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agilis</title>
+        <meta charset="utf-8">
+        <link href="static/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+        <script src="static/script.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>AGILIS</h1>
+                <p>- Ge dig själv mer tid till annat</p>
+                <nav> 
+                    <ul>
+                        <li><a href="./profil" target="blank">Profil</a></li>
+                        <li><a href="./sokjobb" target="blank">Sök jobb</a></li>
+                        <li><a href="./info" target="blank">Information om Agilis</a></li>
+                        <li><a href="./kontakt" target="blank">Kontakta Agilis</a></li>
+                        <li style="float:right"><a class="active"href="./" target="blank">Logga ut</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main id="index_main">
+                <h3>Ladda upp ditt CV</h3>
+                <form action="./sparade_cv_pb" method="POST">
+                    <fieldset>                    
+                               <div> <label for="text">Filnamn...</label></div>
+                               <div> <input type="text" name="title" id="title"></div>
+                        
+                                <div><label for="text">Innehåll...</label></div>
+                               <div> <input type="text" name="text" id="text"></div>
+                            <div><input type="submit" value="Spara CV!"></div>
+                    </fieldset>
+                </form>
+                <h3>Ladda upp ditt Personliga brev</h3>
+                <form action="./sparade_cv_pb" method="POST">
+                    <fieldset>                    
+                               <div> <label for="text">Filnamn...</label></div>
+                               <div> <input type="text" name="title" id="title"></div>
+                        
+                                <div><label for="text">Innehåll...</label></div>
+                               <div> <input type="text" name="text" id="text"></div>
+                            <div><input type="submit" value="Spara personligt brev!"></div>
+                    </fieldset>
+                </form>
+                <h3>Se mina sparade jobb</h3>
+                <p>Kommer upp inom kort!</p>
+                
+            </main>
+            <footer>
+                <p>@AgilisAB</p>
+            </footer>
+        </div>
+    </body>
+</html>
