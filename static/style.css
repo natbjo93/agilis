@@ -132,6 +132,34 @@ form > div > label {
     float: right;
     margin-left: 50px;
 }
+
+/* JOB SEARCH */
+#outside_job_div {
+    display: flex;
+}
+
+#outside_job_div > button {
+    height: 50px;
+    width: 50px;
+}
+
+#info_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.job_info_div {
+    margin-left: 2%;
+    border-left: 1px solid black;
+    padding-left: 2%;
+}
+
+#info_div {
+    border: 1px solid black;
+    padding: 2%;
+}
+
 /* FOOTER */
 footer {
     border-top:1px solid rgb(206, 206, 206);
