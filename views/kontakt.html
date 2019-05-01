@@ -28,14 +28,16 @@
                     Registrera dig hos oss idag!    
                 </p>
                <h3>Är det något som du undrar över kontakta gärna Agilis!</h3>
-               <div class="form"> 
-                <form id="form" method="post" action="">
-                    <input name="name" type="text" class="fält" placeholder="Ditt Namn" required> <br>
-                    <input name="email" type="email" class="fält" placeholder="Din E-post" required><br>
-                    <textarea name="message" class="fält" placeholder="Meddelande" rows= "5" required></textarea><br>
-                    <input type="submit" class="skicka" value="Skicka Meddelande" required>
+              
+                <form class="contact-form" action="contactform.php" method="POST">
+                    <input type="text" name="name" placeholder="Full name">
+                    <input type="text" name="mail" placeholder="Your e-mail">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button type="submit" name="submit">SEND MAIL</button>    
+                    
                 </form>
-            </div>
+           
             </main>
             <footer>
                 <p>@AgilisAB</p>
