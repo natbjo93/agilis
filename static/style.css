@@ -134,6 +134,11 @@ form > div > label {
     all: unset;
 }
 
+form, input, textarea {
+    display: block;
+} 
+    
+
 #job_search {
     width: 80%;
     margin: auto;
