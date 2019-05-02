@@ -139,13 +139,31 @@ form > div > label {
 }
 
 #outside_job_div > button {
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    font-size: 20px;
+    border-radius: 35px;
+}
+
+#no_btn {
+    left: 5%;
+}
+
+#no_btn:hover {
+    background-color: rgb(235, 64, 64);
+}
+
+#btn1 {
+    right: 5%;
+}
+
+#btn1:hover {
+    background-color: rgb(17, 167, 17);
 }
 
 #info_div {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
 }
 
