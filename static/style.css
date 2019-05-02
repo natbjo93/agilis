@@ -18,9 +18,9 @@ body {
 
 /* HEADER */ 
 header {
-    border-bottom: 1px solid rgba(12, 12, 12, 0.338);
+    border-bottom: 1px solid rgba(2, 2, 2, 0.338);
     box-shadow: 0 4px 8px 0 rgba(167, 91, 91, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(79, 112, 134);
+    background-color: rgb(68, 127, 161);
 }
 
 header > h1 {
@@ -76,6 +76,18 @@ main {
 p {
     white-space: pre-wrap;
 }
+
+#nav2 > ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(250, 124, 6);
+    border-block-end: 0px;
+    width: 70%;
+    text-align: center;
+}
+
+
 /* LOG IN AND REGISTER */
 #whole_form {
     display: flex;
