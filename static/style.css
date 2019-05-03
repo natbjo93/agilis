@@ -2,7 +2,7 @@
 body {
     font-family: 'Tajawal', sans-serif;
     margin: 0;
-    background-color: rgb(242, 242, 242);
+    background-color: #f2f2f2;
 }
 
 #wrapper {
@@ -88,6 +88,16 @@ p {
     box-shadow: 0 4px 8px 0 rgba(243, 185, 185, 0.2), 0 6px 20px 0 rgba(243, 9, 9, 0.19)
 }
 
+/* KONTAKTUPPGIFTER */
+#kontaktform {
+    border: 2px dotted black;
+    width: 200px;
+    padding: 20px;
+}
+
+#pilbild {
+    margin-left: 65px;
+}
 
 /* LOG IN AND REGISTER */
 #whole_form {
