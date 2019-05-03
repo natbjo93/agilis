@@ -79,13 +79,17 @@ p {
 
 #nav2 > ul {
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color:rgb(250, 124, 6);
     border-block-end: 0px;
     width: 70%;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(243, 185, 185, 0.2), 0 6px 20px 0 rgba(243, 9, 9, 0.19)
+}
+
+#nav2 > ul > li {
+    padding-left: 50px;
+    text-align: center;
 }
 
 /* KONTAKTUPPGIFTER */
@@ -213,5 +217,3 @@ footer {
     margin: auto;
     text-align: center;
 }
-
-
