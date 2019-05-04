@@ -1,4 +1,4 @@
-from bottle import route, run, template, static_file, request
+from bottle import route, run, template, static_file, request, install, response
 import json
 
 import psycopg2
@@ -6,6 +6,7 @@ conn = psycopg2.connect(dbname="ai9707", user="ai9707" , password="gpvfieda", ho
 cursor = conn.cursor()
 
 import requests
+
 
 def api_response():
     res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=100', headers={'Accept-language': 'application/json'})
@@ -75,5 +76,5 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
-run(host="localhost", port=9094)
+run(host="localhost", port=9095)
 
