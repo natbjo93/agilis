@@ -128,10 +128,22 @@ p {
     border: 2px dotted black;
     width: 200px;
     padding: 20px;
+    text-align: center;
 }
 
+main > h2 {
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
 #pilbild {
     margin-left: 65px;
+    text-align: center;
+}
+main > kontaktfrom {
+    box-align: center;
 }
 
 /* LOG IN AND REGISTER */
@@ -141,7 +153,6 @@ p {
     justify-content: space-evenly;
     width: 100%;
     margin: auto;
-    
 }
 
 #register_form, #login_form {

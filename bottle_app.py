@@ -76,5 +76,5 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
-run(host="localhost", port=9095)
+run(host="localhost", port=8080)
 
