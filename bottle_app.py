@@ -27,7 +27,7 @@ def server_static(filename):
 @route("/check_login", method="POST")
 def check_login():
     username = getattr(request.forms ,"username")
-    password = getattr(request.forms, "password")
+    password = getattr(request.forms, "password_2")
     cursor.execute("select losen from profil where email= '" + (username) + "'")
     database_password = cursor.fetchall()
     try:
@@ -50,7 +50,7 @@ def register():
     password = getattr(request.forms, "password")
     cursor.execute("insert into profil(email, fnamn, Enamn, losen) values ('" + (email) + "', '" + (first_name) + "', '" + (last_name) + "', '" + (password) + "')")
     conn.commit()
-    return template("index")
+    return template("index", root="static")
 
 @route("/sokjobb")
 def sok_jobb():
