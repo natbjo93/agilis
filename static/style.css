@@ -59,7 +59,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
     border: 1px solid rgba(255, 255, 255, 0.708);
     padding: 1%;
     margin-top: 1%;
+    background-color: rgba(255, 255, 255, 0.5);
+    
 }
+
+#index_info:hover article {
+    opacity: 1,5;
+}
+
 
 header > h1 {
     padding-left: 7%;
