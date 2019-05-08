@@ -75,7 +75,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:rgb(2, 64, 97);
+    background-color:#024061;
     border-block-end: 0px;
 }
   
@@ -99,7 +99,7 @@ background-color:rgba(250, 249, 249, 0.171);
 main {
     margin: auto;
     width: 90%;
-    border: 1px solid rgb(206, 206, 206);
+    border: 1px solid #cecece;
     padding: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -158,7 +158,7 @@ main > kontaktfrom {
 #register_form, #login_form {
     display: flex;
     flex-flow: column;
-    background-color: rgba(255, 255, 255, 0.708);
+    background-color: #ffffffb5;
     padding: 5%;
     width: 100%;
     margin: 2%;
@@ -261,4 +261,3 @@ footer {
     text-align: center;
     color: rgb(206, 206, 206);
 }
-
