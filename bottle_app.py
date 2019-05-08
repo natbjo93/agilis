@@ -32,21 +32,13 @@ def check_login():
     database_password = cursor.fetchall()
     try:
         if database_password[0][0] == password:
-<<<<<<< HEAD
-            return template("profil") 
-=======
             return template("profil")
->>>>>>> d788bad719f71a7bc4b9bf3ceab019719ac55816
         else:
             return template("index")
     except:
         print(database_password)
         if database_password[0] == password:
-<<<<<<< HEAD
-            return template("profil") 
-=======
             return template("profil")
->>>>>>> d788bad719f71a7bc4b9bf3ceab019719ac55816
         else:
             return template("index")
 
