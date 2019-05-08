@@ -33,6 +33,12 @@ body {
     padding: 3%;
 }
 
+a:link {
+    background-color: transparent; 
+    text-decoration: none;
+    color: #fa7c06;
+}
+
 /* HEADER */ 
 header {
     border-bottom: 1px solid rgba(2, 2, 2, 0.338);
@@ -49,6 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
     background-color: rgba(255, 255, 255, 0.708);
     border-radius: 1%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fa7c06;
 }
 
 #div_index {
