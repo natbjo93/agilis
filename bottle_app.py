@@ -30,17 +30,15 @@ def check_login():
     password = getattr(request.forms, "password_2")
     cursor.execute("select losen from profil where email= '" + (username) + "'")
     database_password = cursor.fetchall()
-    cursor.execute("select fnamn from profil where email= '" + (username) + "'")
-    firstname = cursor.fetchall() 
     try:
         if database_password[0][0] == password:
-            return template("profil", username = firstname[0][0])
+            return template("profil")
         else:
             return template("index")
     except:
         print(database_password)
         if database_password[0] == password:
-            return template("profil", username = firstname[0][0])
+            return template("profil")
         else:
             return template("index")
 
@@ -68,7 +66,7 @@ def info():
 
 @route("/profil")
 def profil():
-    return template("profil", username = username, root="static")
+    return template("profil", root="static")
 
 @route("/cv_personligt_brev")
 def cv():
