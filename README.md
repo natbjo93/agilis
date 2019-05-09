@@ -1,5 +1,5 @@
 # Agilis
-Information
+#Information
 -----------
 Agilis är en webbapplikation som är till för personer som vill underlätta jobbsökandet.
 Agilis motto är att det inte ska ta lång tid att söka jobb och att man ska ha tid över till annat.
