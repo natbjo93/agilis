@@ -27,7 +27,7 @@ def server_static(filename):
 @route("/check_login", method="POST")
 def check_login():
     username = getattr(request.forms ,"username")
-    password = getattr(request.forms, "password_2")
+    password = getattr(request.forms, "password")
     cursor.execute("select losen from profil where email= '" + (username) + "'")
     database_password = cursor.fetchall()
     try:
