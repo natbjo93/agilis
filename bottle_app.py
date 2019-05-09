@@ -7,7 +7,6 @@ cursor = conn.cursor()
 
 import requests
 
-
 def api_response():
     res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=100', headers={'Accept-language': 'application/json'})
     if res.status_code != 200:
