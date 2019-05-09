@@ -3,7 +3,8 @@
     <head>
         <title>Agilis Sök jobb</title>
         <meta charset="utf-8">
-        <link href="static/style.css" rel="stylesheet">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
         <script src="static/script.js"></script>
@@ -15,9 +16,9 @@
                 <p>- Ett effektivt jobbsökande</p>
                 <nav> 
                         <ul>
-                            <li><a href="./profil">Profil</a></li>
-                            <li><a href="./sokjobb">Sök jobb</a></li>
-                            <li><a href="./kontakt">Kontakt</a></li>
+                            <li><a href="/profil">Profil</a></li>
+                            <li><a href="/sokjobb">Sök jobb</a></li>
+                            <li><a href="/kontakt">Kontakt</a></li>
                             <li style="float:right"><a class="active"href="./">Logga ut</a></li>
                         </ul>
                     </nav>

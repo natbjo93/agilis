@@ -5,17 +5,17 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'blog/index.html')
 
-def home(request):
+def info(request):
     return render(request, 'blog/info.html')
 
-def home(request):
+def kontakt(request):
     return render(request, 'blog/kontakt.html')
 
-def home(request):
+def sokjobb(request):
     return render(request, 'blog/sokjobb.html')
 
-def home(request):
-    return render(request, 'blog/index.html')
+def profil(request):
+    return render(request, 'blog/profil.html')
 
 def upload(request):
     return render(request, 'upload.html')
