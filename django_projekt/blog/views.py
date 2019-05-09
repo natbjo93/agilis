@@ -17,5 +17,5 @@ def home(request):
 def home(request):
     return render(request, 'blog/index.html')
 
-def about(request):
-    return HttpResponse(' ')
+def upload(request):
+    return render(request, 'upload.html')
