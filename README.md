@@ -1,4 +1,9 @@
 # Agilis
+Information
+-----------
+Agilis är en webbapplikation som är till för personer som vill underlätta jobbsökandet.
+Agilis motto är att det inte ska ta lång tid att söka jobb och att man ska ha tid över till annat.
+
 ## Installation
 Requierments: 
 1. cd to the directory where requirements.txt is located.
