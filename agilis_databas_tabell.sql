@@ -1,15 +1,32 @@
-\set ON_ERROR_STOP on
+/*\set ON_ERROR_STOP on
 drop table if exists profil;
 drop table if exists brev;
 drop table if exists jobb;
 drop table if exists söker;
-drop table if exists sparastill;
+drop table if exists sparastill;*/
+
+
+
+/*  
+
+Connect to database:
+C:\Users\natha\OneDrive\Skrivbord\DATABASTEKNIK\pgsql\bin\psql.exe -U ai9707 -d ai9707 -h pgserver.mah.se
+
+Run sql-script to create new database with updates
+\i 'C:/Users/natha/desktop/agilis/agilis_databas_tabell.sql'  */
+
+\c ai9707;
+DROP DATABASE if exists agilis;
+CREATE database agilis;
+\c agilis;
+
+/*Tips! Fundera på om alla id går serialisera. Kolla upp datatypen serial*/
 
 create table profil
 (email	     varchar(50),
  cv	         varchar(50),
  fnamn       varchar(50),
- Enamn       varchar(50),
+ enamn       varchar(50),
  losen       varchar(50),
  primary key (email));
 
@@ -19,6 +36,7 @@ create table jobb
  sistasokdatum	 varchar(50),
  primary key(jobbid));
 
+/*Ta bort namn och ha email som främmande nyckel till profil-tabellen*/
  create table brev
  (id        int,
   email     varchar(50),
@@ -26,11 +44,14 @@ create table jobb
   brev      varchar(200),
   primary key(id));
 
+/*Måste vara främmande nycklar till relevanta tabeller. Ex jobb-id måste vara kopplat till jobb-tabell*/
 create table soker
 (jobbid      int,
  email	     varchar(50),
  primary key (jobbid, email));
 
+
+ /*Vad används denna till? Varför är de likadana?*/
 create table sparastill
 (jobbid	     int,
  email	     varchar(50),
@@ -47,9 +68,10 @@ insert into jobb values
 (1,'Trädgårdsarbetare', '2019-04-25'),
 (2,'MCdonalds', '2019-05-06');
 
+/*
 insert into brev values
 
 insert into sparastill values
 
 insert into soker values
-
+*/

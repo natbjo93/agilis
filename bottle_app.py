@@ -2,7 +2,7 @@ from bottle import route, run, template, static_file, request, install, response
 import json
 
 import psycopg2
-conn = psycopg2.connect(dbname="ai9707", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
+conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
 
 import requests
@@ -47,7 +47,9 @@ def register():
     last_name = getattr(request.forms, "last_name")
     email = getattr(request.forms, "email")
     password = getattr(request.forms, "password")
-    cursor.execute("insert into profil(email, fnamn, Enamn, losen) values ('" + (email) + "', '" + (first_name) + "', '" + (last_name) + "', '" + (password) + "')")
+    query = "insert into profil(email, fnamn, enamn, losen) values (%s, %s, %s, %s)"
+    cursor.execute(query, [str(email), str(first_name), str(last_name), str(password)])
+   # cursor.execute("insert into profil(email, fnamn, Enamn, losen) values ('" + (email) + "', '" + (first_name) + "', '" + (last_name) + "', '" + (password) + "')")
     conn.commit()
     return template("index", root="static")
 
