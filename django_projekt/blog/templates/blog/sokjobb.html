@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agilis Sök jobb</title>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="static/script.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="header_main">
+                <h1><a href="./" >AGILIS</a></h1>
+                <p>- Ett effektivt jobbsökande</p>
+                <nav> 
+                        <ul>
+                            <li><a href="/profil">Profil</a></li>
+                            <li><a href="/sokjobb">Sök jobb</a></li>
+                            <li><a href="/kontakt">Kontakt</a></li>
+                            <li style="float:right"><a class="active"href="./">Logga ut</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            <main>
+                <h2>Sök Jobb</h2>
+                <div id="outside_job_div">
+                    <button id="no_btn">Nej</button>
+                    <div id="job_search">
+                        <div id="entire_job_div">
+                            <h2 id="annonsrubrik"></h2>
+                            <p id="yrkesbenamning"></p>
+                            <p id="annonstext"></p>
+                            <p id="kommunnamn"></p>
+                            <div id="info_div">
+                                <div id="job_time_div">
+                                    <p id="varaktighet"></p>
+                                    <p id="arbetstid"></p>
+                                </div>
+                                <div class="job_info_div">
+                                    <p id="lonetyp"></p>
+                                    <p id="loneform"></p>
+                                </div>
+                                <div class="job_info_div">
+                                    <p id="sista_ansokningsdag"></p>
+                                    <p id="webbplats"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btn1" api_response="{{api_response}}">Ja</button>
+                </div>
+            </main>
+            <footer>
+                <p>@AgilisAB</p>
+            </footer>
+        </div>
+    </body>
+</html>

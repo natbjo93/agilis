@@ -3,9 +3,11 @@
     <head>
         <title>Agilis</title>
         <meta charset="utf-8">
-        <link href="static/style.css" rel="stylesheet">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-        <script src="static/script.js"></script>
+        <script src="/static/script.js"></script>
     </head>
     <body>
         <div id="index_main">
