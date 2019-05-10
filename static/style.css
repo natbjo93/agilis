@@ -275,6 +275,13 @@ footer {
     color: rgb(206, 206, 206);
 }
 
+.flip-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+
 .flip-card {
     background-color: transparent;
     width:225px;
@@ -282,6 +289,8 @@ footer {
     perspective: 1000px;
     display: block;
   }
+
+  
   
   .flip-card-inner {
     position: relative;
