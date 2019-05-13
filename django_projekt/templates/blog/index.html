@@ -19,7 +19,7 @@
             <main id="div_index">
                 <div id="index_info">
                     {% if user.is_authenticated %}
-                    Hi {{ user.email }}!
+                    Hi {{ user.first_name }}!
                     <p><a href="{% url 'account_logout' %}">Log Out</a></p>
                     {% else %}
                     <p>You are not logged in</p>
