@@ -275,6 +275,8 @@ footer {
     color: rgb(206, 206, 206);
 }
 
+
+/* INFOSIDA */
 .flip-card-container {
     display: flex;
     flex-direction: row;
@@ -290,7 +292,6 @@ footer {
     display: block;
   }
 
-  
   
   .flip-card-inner {
     position: relative;
@@ -314,17 +315,20 @@ footer {
   }
   
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #024061;
     color: black;
     z-index: 2;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: #024061;
     color: white;
     transform: rotateY(180deg);
     z-index: 1;
   }
+
+
+
 #form_email {
     padding: 10px;
     

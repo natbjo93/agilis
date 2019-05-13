@@ -36,19 +36,20 @@ create table jobb
  sistasokdatum	 varchar(50),
  primary key(jobbid));
 
-/*Ta bort namn och ha email som främmande nyckel till profil-tabellen*/
  create table brev
  (id        int,
   email     varchar(50),
-  namn      varchar(50),
   brev      varchar(200),
-  primary key(id));
+  primary key(id)),
+  FOREIGN key(email) REFERENCES profil(email));
 
 /*Måste vara främmande nycklar till relevanta tabeller. Ex jobb-id måste vara kopplat till jobb-tabell*/
 create table soker
 (jobbid      int,
  email	     varchar(50),
- primary key (jobbid, email));
+ primary key (jobbid, email)),
+ FOREIGN key (jobbid) REFERENCES jobb(jobbid));
+ FOREIGN key (email) REFERENCES profil(profil));
 
 
  /*Vad används denna till? Varför är de likadana?*/
@@ -62,7 +63,6 @@ insert into profil values
 ('fo', 'CV', 'Ronja', 'Näckblad', 'ronja'),
 ('nathaliebjornsson@hotmail.com', 'CV', 'Nathalie', 'Björnsson', 'lösen'),
 ('patchanasirini@gmai.com', 'CV', 'Patchana', 'Sirini', 'lösen'),
-('anasm.abdullai@hotmail.com', 'CV', 'Anas', 'Abdullai', 'lösen');
 
 insert into jobb values
 (1,'Trädgårdsarbetare', '2019-04-25'),
