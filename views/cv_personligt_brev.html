@@ -24,33 +24,17 @@
             <main>
                 <h2>Uppladdning</h2>
                 <h3>Ladda upp ditt CV</h3>
-                <form action="./sparade_cv_pb" method="POST">
-                    <fieldset>                    
-                               <div> <label for="text">Förnamn...</label></div>
-                               <div> <input type="text" name="title" id="title"></div><br>
-                                <div><label for="text">Efternamn...</label></div>
-                               <div> <input type="text" name="text" id="text"></div><br>
-                               <div> <label for="text">Yrke...</label></div>
-                               <div> <input type="text" name="title" id="title"></div><br>
-                                <div><label for="text">Nuvarande jobb...</label></div>
-                               <div> <input type="text" name="text" id="text"></div><br>
-                               <div> <label for="text">Bakgrund...</label></div>
-                               <div> <input type="text" name="title" id="title"></div><br>
-                                <div><label for="text">Språk...</label></div>
-                               <div> <input type="text" name="text" id="text"></div><br>
-                            <div><input type="submit" value="Spara CV!"></div>
-                    </fieldset>
+                <form enctype="multipart/form-data" action="/cgi-bin/uploadfile.py" method="post">
+                    <p>File: <input type="file" name="filename"/> </p>
+                    <p> <input type="submit" value="upload"/> </p>
                 </form>
+            
                 <h3>Ladda upp ditt Personliga brev</h3>
-                <form action="./sparade_cv_pb" method="POST">
-                    <fieldset>                    
-                               <div> <label for="text">Filnamn...</label></div>
-                               <div> <input type="text" name="title" id="title"></div><br>
-                                <div><label for="text">Innehåll...</label></div>
-                               <div> <input type="text" name="text" id="text"></div><br>
-                            <div><input type="submit" value="Spara personligt brev!"></div>
-                    </fieldset>
+                <form enctype="multipart/form-data" action="/cgi-bin/uploadfile.py" method="post">
+                    <p>File: <input type="file" name="filename"/> </p>
+                    <p> <input type="submit" value="upload"/> </p>
                 </form>
+                
                 <h3><a href="sparade_cv_pb" ><b>Se sparade jobb</b></a></h3>
                 <p><b>Tillbaka till <a href="./profil">profilsida</b></a></p>
             </main>
