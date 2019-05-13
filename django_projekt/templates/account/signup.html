@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agilis</title>
+        <meta charset="utf-8">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+        <script src="/static/script.js"></script>
+    </head>
+    <body>
+        <div id="index_main">
+            <header id="header_main">
+                <h1><em>AGILIS</em>
+                </h1>
+                <p>Ett effektivt jobbsökande</p>
+            </header>
+            <main id="div_index">
+                <div id="index_info">
+                    <h2>För dig som söker jobb</h2>
+                    <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett 
+                        enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker!<br> 
+                     <a href="./info">Här har vi samlat information om vilka vi är och hur du kommer igång!</a>  
+                     <a href="./kontakt">Vill du komma i kontakt med Agilis?</a> 
+                    </p>
+                    <h2>Registrera dig idag!</h2>
+                </div>
+                <div id="whole_form">
+                    <h2>Sign Up</h2>
+                    <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </main>
+            <footer id="index_footer">
+                <p>@AgilisAB</p>
+            </footer>
+        </div>
+    </body>
+</html>

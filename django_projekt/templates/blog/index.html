@@ -18,13 +18,14 @@
             </header>
             <main id="div_index">
                 <div id="index_info">
-                    <h2>För dig som söker jobb</h2>
-                    <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett 
-                        enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker!<br> 
-                     <a href="./info">Här har vi samlat information om vilka vi är och hur du kommer igång!</a>  
-                     <a href="./kontakt">Vill du komma i kontakt med Agilis?</a> 
-                    </p>
-                    <h2>Registrera dig idag!</h2>
+                    {% if user.is_authenticated %}
+                    Hi {{ user.email }}!
+                    <p><a href="{% url 'account_logout' %}">Log Out</a></p>
+                    {% else %}
+                    <p>You are not logged in</p>
+                    <a href="{% url 'account_login' %}">Log In</a> |
+                    <a href="{% url 'account_signup' %}">Sign Up</a>
+                    {% endif %}
                 </div>
                 <div id="whole_form">
                     <form id="login_form" action="/check_login" method="POST">
