@@ -77,5 +77,10 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
+@route("/upload")
+def upload():
+    img = request.paragram.get("filename")
+    move_file("resourses/upload/img[name], img")
+
 run(host="localhost", port=8081)
 

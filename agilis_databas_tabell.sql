@@ -51,6 +51,11 @@ create table soker
  FOREIGN key (jobbid) REFERENCES jobb(jobbid));
  FOREIGN key (email) REFERENCES profil(profil));
 
+ create table upload
+ (id          int,
+ titel        varchar(50),
+ uploaded_at  varchar(50),
+ PRIMARY key  (id);
 
  /*Vad används denna till? Varför är de likadana?*/
 create table sparastill
