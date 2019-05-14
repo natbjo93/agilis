@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^kontakt/$', views.kontakt, name='kontakt'),
     url(r'^profil/$', views.profil, name='profil'),
     url(r'^sokjobb/$', views.sokjobb, name='sokjobb'),
+    url(r'^register/$', views.register, name='register'),
 ]
