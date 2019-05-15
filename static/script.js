@@ -1,3 +1,4 @@
+// Dess två funktioner hanterar att lösenordet visas som tecken eller ***
 function asterixPassword() {
   var x = document.getElementById("password");
   if (x.type === "password") {
@@ -16,6 +17,8 @@ function asterixPassword2() {
   }
 }
 
+
+// Här börjar all kod som hanterar API requesten
 var v="{{=api_response}}";
 console.log(v);
 
@@ -25,14 +28,13 @@ function passingVariables(variable) {
 
 $(function () {
   $("#btn1").on('click', function(e, variable) {
-    // disable button till the operation is completed
+    //stänger av knappen tills operationen är klar
     $(this).prop('disabled', 'disabled');
-    // console.log({$(this).attr('api_response'));
     apiResponseObject = JSON.parse($(this).attr('api_response'));
 
     jobList = apiResponseObject.matchningslista.matchningdata;
 
-    // use data-currentIndex to store the local variable i
+    // använd data-CurrentIndex för att lagra lokal variabel
     var idx = $('#annonsrubrik').data('currentIndex');
     if (idx === undefined) {
       idx = 0;
@@ -41,6 +43,7 @@ $(function () {
     const url = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + jobList[idx].annonsid;
     console.log(apiResponseObject)
 
+    // Här under hämtar vi vad vi vill ha från jsonfilen, och bestämmer i vilken div vi vill lägga datan i
     $.ajax({
       url: url,
       type: "GET",
@@ -83,3 +86,5 @@ $(function () {
       }});
   });
 });
+
+// Här slutar hanteringen av API request
