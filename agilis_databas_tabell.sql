@@ -4,9 +4,6 @@ drop table if exists brev;
 drop table if exists jobb;
 drop table if exists söker;
 drop table if exists sparastill;*/
-
-
-
 /*  
 
 Connect to database:
@@ -20,16 +17,32 @@ DROP DATABASE if exists agilis;
 CREATE database agilis;
 \c agilis;
 
-/*Tips! Fundera på om alla id går serialisera. Kolla upp datatypen serial*/
-
 create table profil
 (email	     varchar(50),
- cv	         varchar(50),
+ cid	       varchar(50),
+ pid	       varchar(50),
  fnamn       varchar(50),
  enamn       varchar(50),
  losen       varchar(50),
- primary key (email));
+ primary key (email)),
+ FOREIGN key (cid) REFERENCES cv(cid));
+ FOREIGN key (pid) REFERENCES cv(pid));
 
+ create table cv
+ (cid          int,
+ email        varchar(50),
+ cv           varchar(50),
+ PRIMARY key  (cid)),
+ FOREIGN key   (email) REFERENCES profil(email));
+
+ CREATE TABLE pb 
+ (pid          int,
+ email         VARCHAR(50),
+ pb            VARCHAR(50),
+ primary key   (pid)),
+ FOREIGN KEY   (email) REFERENCES profil(email));
+
+/*
 create table jobb 
 (jobbid          int,
  titel	         varchar(50),
@@ -43,7 +56,6 @@ create table jobb
   primary key(id)),
   FOREIGN key(email) REFERENCES profil(email));
 
-/*Måste vara främmande nycklar till relevanta tabeller. Ex jobb-id måste vara kopplat till jobb-tabell*/
 create table soker
 (jobbid      int,
  email	     varchar(50),
@@ -51,17 +63,12 @@ create table soker
  FOREIGN key (jobbid) REFERENCES jobb(jobbid));
  FOREIGN key (email) REFERENCES profil(profil));
 
- create table upload
- (id          int,
- titel        varchar(50),
- uploaded_at  varchar(50),
- PRIMARY key  (id);
-
- /*Vad används denna till? Varför är de likadana?*/
 create table sparastill
 (jobbid	     int,
  email	     varchar(50),
  primary key (jobbid, email));
+
+*/
 
 insert into profil values
 ('petra.svensson@live.se', 'CV', 'Petra', 'Svensson', 'lösen'),
@@ -72,11 +79,3 @@ insert into profil values
 insert into jobb values
 (1,'Trädgårdsarbetare', '2019-04-25'),
 (2,'MCdonalds', '2019-05-06');
-
-/*
-insert into brev values
-
-insert into sparastill values
-
-insert into soker values
-*/
