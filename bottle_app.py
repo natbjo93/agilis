@@ -37,7 +37,7 @@ def check_login():
         database_password = cursor.fetchone()
         if database_password[0] == password:
             response.set_cookie('account', username, secret= '123')
-            return redirect("profil")
+            return template("profil")
         else:
             return redirect("/")
     except:
