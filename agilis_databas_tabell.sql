@@ -32,8 +32,7 @@ create table profil
  (cid          int,
  email        varchar(50),
  cv           varchar(50),
- PRIMARY key  (cid)),
- FOREIGN key   (email) REFERENCES profil(email));
+ PRIMARY key  (cid));
 
  CREATE TABLE pb 
  (pid          int,

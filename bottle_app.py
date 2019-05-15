@@ -100,21 +100,14 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
-'''
-@route("/upload")
+@route("/upload", METHOD="POST")
 def upload():
+    file = getattr(request.forms ,"filename")
+    cursor.execute("insert into cv values ('" + (file) + "') where cv")
+    return template("upload", root="static")
+    '''
     img = request.post.get("filename")
     move_file("resourses/upload/img[name], img")
-
-
-@app.route("/upload", methods=['POST'])
-def upload_file():
-    def custom_stream_factory(total_content_length, filename, content_type, content_length=None):
-        import tempfile
-        tmpfile = tempfile.NamedTemporaryFile('wb+', prefix='flaskapp', suffix='.nc')
-        app.logger.info("start receiving file ... filename => " + str(tmpfile.name))
-        return tmpfile
-
 '''
 
 run(host="localhost", port=8082)
