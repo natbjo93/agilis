@@ -16,22 +16,6 @@ body {
     "footer";
 }
 
-#index_main {
-    margin: 1px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 80% auto;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
-    background-position: centser;
-    background-size: cover;
-    height: 100%;
-    margin: auto;
-    padding: 3%;
-}
-
 a:link {
     background-color: transparent; 
     text-decoration: none;
