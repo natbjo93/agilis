@@ -1,4 +1,4 @@
-from bottle import route, run, template, static_file, request, install, response
+from bottle import route, run, template, static_file, request, response, redirect
 import json
 
 import psycopg2
@@ -28,18 +28,14 @@ def check_login():
     username = getattr(request.forms ,"username")
     password = getattr(request.forms, "password")
     cursor.execute("select losen from profil where email= '" + (username) + "'")
-    database_password = cursor.fetchall()
-    try:
-        if database_password[0][0] == password:
-            return template("profil")
-        else:
-            return template("index")
-    except:
-        print(database_password)
-        if database_password[0] == password:
-            return template("profil")
-        else:
-            return template("index")
+    database_password = cursor.fetchone()
+    print(type(database_password))
+    if database_password[0] == password:
+        response.set_cookie('account', username, secret= '123')
+        return template("profil", root="static")
+    else:
+        return redirect("index")
+
 
 @route("/register", method="POST")
 def register():
@@ -55,7 +51,16 @@ def register():
 
 @route("/sokjobb")
 def sok_jobb():
-    return template("sokjobb", root="static", api_response=api_response())
+    username = request.get_cookie('account', secret='123')
+    if username:
+        return template("sokjobb", root="static", api_response=api_response())
+    else:
+        return redirect("/")
+
+@route("/signout")
+def signout():
+    response.delete_cookie('account')
+    return redirect("/")
 
 @route("/kontakt")
 def kontakt():
@@ -67,7 +72,12 @@ def info():
 
 @route("/profil")
 def profil():
-    return template("profil", root="static")
+
+    username = request.get_cookie('account', secret='123')
+    if username:
+        return template("profil", root="static")
+    else:
+        return redirect("/")
 
 @route("/cv_personligt_brev")
 def cv():
