@@ -208,7 +208,38 @@ form > div > label {
 form, input, textarea {
     display: block;
 } 
-    
+
+/* kontakt form */
+.form_email{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px; 
+
+}
+input[type=email],textarea {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    resize: vertical;
+
+  }
+  button[type=submit] {
+    background-color: #024061;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  button[type=submit]:hover {
+    background-color:#fa7c06;
+  }
+  
+
 
 #job_search {
     width: 80%;
