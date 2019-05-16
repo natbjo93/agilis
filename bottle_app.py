@@ -119,11 +119,12 @@ def upload():
 
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
-    return template("upload", root="static")
-    '''
-    cursor.execute("update profil set cv =" + {} + "where email = " + {}.format(file_path, user_email))
+    cursor.execute("update profil set cv = '{}' where email = '{}'".format(file_path, user_email))
     conn.commit()
-    '''
+
+    return template("upload", root="static")
+
+
 
 run(host="localhost", port=8082)
 
