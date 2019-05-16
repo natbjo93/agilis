@@ -38,7 +38,7 @@ def check_login():
         database_password = cursor.fetchone()
         if database_password[0] == password:
             response.set_cookie('account', username, secret= '123')
-            return redirect("profil")
+            return template("profil")
         else:
             return redirect("/")
     except:
@@ -119,8 +119,9 @@ def upload():
 
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
-
-    cursor.execute("update cv set cv = ({}) where email = '{}'".format(file_path, user_email))
+    '''
+    cursor.execute("update profil set cv = ({}) where email = '{}'".format(file_path, user_email))
+    '''
     return template("upload", root="static")
 
 run(host="localhost", port=8082)
