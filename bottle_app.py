@@ -2,6 +2,7 @@ from bottle import route, run, template, static_file, request, response, redirec
 import json
 import psycopg2
 import requests
+import os
 
 conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
@@ -52,7 +53,7 @@ def register():
     last_name = getattr(request.forms, "last_name")
     email = getattr(request.forms, "email")
     password = getattr(request.forms, "password")
-    query = "insert into profil(email, fnamn, enamn, losen) values (%s, %s, %s, %s)"
+    query = "insert into profil(email, first_name, last_name, losen) values (%s, %s, %s, %s)"
     cursor.execute(query, [str(email), str(first_name), str(last_name), str(password)])
     conn.commit()
     return template("index", root="static")
@@ -100,22 +101,27 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
-'''
-@route("/upload")
+@route("/upload", method="POST")
 def upload():
-    img = request.post.get("filename")
-    move_file("resourses/upload/img[name], img")
+    '''
+    Till för filuppladdning av CV & Personliga brev
+    '''
+    user_email = request.get_cookie('account', secret="123")
+        
+    upload = request.files.get('filename')
+    name, ext = os.path.splitext(upload.filename)
+    if ext not in ('.pdf'):
+        return "File extension not allowed."
 
+    save_path = "static/uploads/{}".format(user_email)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
 
-@app.route("/upload", methods=['POST'])
-def upload_file():
-    def custom_stream_factory(total_content_length, filename, content_type, content_length=None):
-        import tempfile
-        tmpfile = tempfile.NamedTemporaryFile('wb+', prefix='flaskapp', suffix='.nc')
-        app.logger.info("start receiving file ... filename => " + str(tmpfile.name))
-        return tmpfile
+    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
+    upload.save(file_path)
 
-'''
+    cursor.execute("update profil set cv values '" + (file_path) + "' where email = '" + (user_email) + "'")
+    return template("profil", root="static")
 
 run(host="localhost", port=8082)
 
