@@ -119,9 +119,11 @@ def upload():
 
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
-
-    cursor.execute("update profil set cv values '" + (file_path) + "' where email = '" + (user_email) + "'")
-    return template("profil", root="static")
+    '''
+    cursor.execute("update profil set cv = ({}) where email = '{}'".format(file_path, user_email))
+    '''
+    return template("upload", root="static")
+>>>>>>> 95cab03b65ccebd389c9ac6607dea730df8fa33b
 
 run(host="localhost", port=8082)
 
