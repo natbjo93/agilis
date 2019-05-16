@@ -26,13 +26,13 @@
             <main>
                 <h2>Uppladdning</h2>
                 <h3>Ladda upp ditt CV</h3>
-                <form enctype="multipart/form-data" action="/upload" method="POST">
+                <form enctype="multipart/form-data" action="/uploadcv" method="POST">
                     <p>File: <input type="file" name="filename"/> </p>
                     <p><input type="submit" value="upload"/> </p>
                 </form>
             
                 <h3>Ladda upp ditt Personliga brev</h3>
-                <form enctype="multipart/form-data" action="/cgi-bin/uploadfile.py" method="post">
+                <form enctype="multipart/form-data" action="/uploadpb" method="POST">
                     <p>File: <input type="file" name="filename"/> </p>
                     <p> <input type="submit" value="upload"/> </p>
                 </form>

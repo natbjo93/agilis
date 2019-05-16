@@ -3,6 +3,7 @@ import json
 import psycopg2
 import requests
 import os
+import uuid
 
 conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
@@ -101,10 +102,10 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
-@route("/upload", method="POST")
-def upload():
+@route("/uploadcv", method="POST")
+def uploadcv():
     '''
-    Till för filuppladdning av CV & Personliga brev
+    Till för filuppladdning av CV
     '''
     user_email = request.get_cookie('account', secret="123")
         
@@ -122,9 +123,31 @@ def upload():
     cursor.execute("update profil set cv = '{}' where email = '{}'".format(file_path, user_email))
     conn.commit()
 
-    return template("upload", root="static")
+    return template("upload_success", root="static")
 
 
+@route("/uploadpb", method="POST")
+def uploadpb():
+    '''
+    Till för filuppladdning av Personliga brev
+    '''
+    user_email = request.get_cookie('account', secret="123")
+
+    upload = request.files.get('filename')
+    name, ext = os.path.splitext(upload.filename)
+    if ext not in ('.pdf'):
+        return "File extension not allowed."
+
+    save_path = "static/uploads/{}".format(user_email)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
+    print(uuid.uuid4())
+    cursor.execute("insert into personligabrev(id, email, pb) values ('{}', '{}', '{}')".format(uuid.uuid4(), user_email, file_path))
+    conn.commit()
+
+    return template("upload_success", root="static")
 
 run(host="localhost", port=8082)
 
