@@ -11,3 +11,11 @@ insert into profil values
 ('ronja@hotmail.com', NULL, 'Ronja', 'Näckblad', 'ronja'),
 ('nathaliebjornsson@hotmail.com', NULL, 'Nathalie', 'Björnsson', 'lösen'),
 ('patchanasirini@gmai.com', NULL, 'Patchana', 'Sirini', 'lösen');
+
+create table personligabrev
+(id          varchar(255),
+ email	     varchar(255),
+ pb	         varchar(255),
+ primary key (id),
+ foreign key (email) references profil(email));
+
