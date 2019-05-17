@@ -27,6 +27,10 @@ def index():
 def server_static(filename):
     return static_file(filename, root="static")
 
+@route("/static/uploads/<filepath:path>")
+def server_static(filepath):
+    return static_file(filepath, root="static/uploads/")
+
 @route("/check_login", method="POST")
 def check_login():
     '''
@@ -149,5 +153,5 @@ def uploadpb():
 
     return template("upload_success", root="static")
 
-run(host="localhost", port=8082)
+run(host="localhost", port=8082, reloader=True)
 
