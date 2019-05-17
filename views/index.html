@@ -1,64 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Agilis</title>
-        <meta charset="utf-8">
-        <link href="static/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-        <script src="static/script.js"></script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <header id="header_main">
-                    <div id="logo" >
-                        <h1><a href="./"><img src="static/logo.png" alt="info"></a></h1>
-                    </div>    
-                            </header>
-            <main id="div_index">
-                <div id="index_info">
-                    <h2>För dig som söker jobb</h2>
-                    <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett 
-                        enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker!<br> 
-                     <a href="./info">Här har vi samlat information om vilka vi är och hur du kommer igång!</a>  
-                     <a href="./kontakt">Vill du komma i kontakt med Agilis?</a> 
-                    </p>
-                    <h2>Registrera dig idag!</h2>
-                </div>
-                <div id="whole_form">
-                    <form id="login_form" action="/check_login" method="POST">
-                        <h3>Redan medlem? Logga in</h3>
-                        <label for="username">Email:</label>
-                        <input required type="email" id="username" name="username">
-                        <label for="password" >Lösenord:</label>
-                        <input type="password" id="password" name="password">
-                        <div>
-                            <input type="checkbox" onclick="asterixPassword()">
-                            <p>Visa lösenord</p>
-                        </div>
-                        <input class="save btn" type="submit" value="Logga in">
-                    </form>
-                    <form id="register_form" action="/register" method="POST">
-                        <h3>Registrera dig för att komma igång och söka jobb!</h3>
-                        <label for="first_name">Namn:</label>
-                        <input type="text" id="first_name" name="first_name">
-                        <label for="last_name" >Efternamn:</label>
-                        <input type="text" id="last_name" name="last_name">
-                        <label for="email" >Email:</label>
-                        <input required type="email" id="email" name="email" 
-                        title="Du måste ange e-mail med ett @...com!">
-                            <label for="password" >Lösenord:</label>
-                         <input required type="password" id="password_2" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                        title="Lösenordet måste innehålla minst en siffra och en storbokstav samt minst åtta tecken.">
-                        <div>
-                            <label><input type="checkbox" onclick="asterixPassword2()">Visa lösenord</label>
-                        </div>
-                        <input class="register_btn" type="submit" value="Registrera">
-                    </form>
-                </div>
-            </main>
-            <footer id="index_footer">
-                <p>@AgilisAB</p>
-            </footer>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Agilis</title>
+    <link rel="icon" href="static/logo.png" type="icon">
+
+    <!-- Bootstrap -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="static/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="static/modernizr.js"></script>
+
+   
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+ 
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
         </div>
-    </body>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Agilis</li>
+
+                <li><a href="./">Agilis</a></li>
+                <li><a href="./info">Information</a></li>
+                <li><a href="./login">Logga in/Registera dig</a></li>
+                <li><a href="./kontakt">Kontakt</a></li>
+
+            </ul>
+        </nav>
+        <!-- end nav -->
+
+        <!-- box-intro -->
+        <section class="box-intro">
+            <div class="table-cell">
+                <h1 class="box-headline letters rotate-2">
+                    <span class="box-words-wrapper">
+                        <b class="is-visible">Agilis.</b>
+                        <b>&nbsp;Agilis.</b>
+                        
+                    </span>
+		        </h1>
+                <h5>-Ett effektivt jobbsökande</h5>
+            </div>
+
+            <div class="mouse">
+                <div class="scroll"></div>
+            </div>
+        </section>
+        <!-- end box-intro -->
+    </div>
+
+ 
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">@AgilisAB</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+    <!-- jQuery -->
+    <script src="static/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="static/bootstrap.min.js"></script>
+    <script src="static/menu.js"></script>
+    <script src="static/animated-headline.js"></script>
+    <script src="static/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="static/custom.js"></script>
+
+</body>
+
 </html>
