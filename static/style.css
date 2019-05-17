@@ -310,6 +310,11 @@ footer {
 
 
 /* INFOSIDA */
+.infobild{
+    float:left;
+
+
+}
 .flip-card-container {
     display: flex;
     flex-direction: row;
