@@ -47,7 +47,7 @@ def check_login():
         database_password = cursor.fetchone()
         if database_password[0] == password:
             response.set_cookie('account', username, secret= '123')
-            return template("profil")
+            return redirect("/profil")
         else:
             return redirect("/")
     except:
@@ -76,7 +76,7 @@ def sok_jobb():
     if username:
         return template("sokjobb", root="static", api_response=api_response())
     else:
-        return redirect("/")
+        return redirect("/login")
 
 @route("/signout")
 def signout():
@@ -100,7 +100,7 @@ def profil():
     if username:
         return template("profil", root="static")
     else:
-        return redirect("/")
+        return redirect("/login")
 
 @route("/cv_personligt_brev")
 def cv():

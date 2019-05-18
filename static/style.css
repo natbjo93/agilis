@@ -550,10 +550,15 @@ b i:last-child {
     flex-flow: row;
 }
 
+#job_search {
+    width: 90%;
+}
+
 #sticky_div {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
+    right: 30px;
 }
 
 #sticky_div.stick {
@@ -561,6 +566,7 @@ b i:last-child {
     position: fixed;
     top: 0;
     z-index: 9999;
+    right: 30px;
 }
 
 /* mouse effect */
