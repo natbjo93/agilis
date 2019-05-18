@@ -97,8 +97,11 @@ def info():
 @route("/profil")
 def profil():
     username = request.get_cookie('account', secret='123')
+    cursor.execute("select first_name from profil where email= '" + (username) + "'")
+    namelist = cursor.fetchone()
+    first_name = namelist[0]
     if username:
-        return template("profil", root="static")
+        return template("profil", root="static", first_name = first_name)
     else:
         return redirect("/login")
 
