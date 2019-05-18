@@ -1,66 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-    <head>
-        <title>Agilis</title>
-        <meta charset="utf-8">
-        <link href="static/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-        <script src="static/script.js"></script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <header id="header_main">
-                 <div id="logo" >
-                    <h1><a href="./"><img src="static/logo.png" alt="info"></a></h1>
-                </div>    
-            </header>
-            <main id="div_index">
-                <div id="index_info">
-                    <h2>För dig som söker jobb</h2>
-                        <p>Agilis är för dig som aktivt söker många jobb varje dag. Vi underlättar för dig genom att samla alla jobb och visa upp dem i ett 
-                        enkelt 'ja' eller 'nej' format. Därefter har du möjlighet att skicka ditt CV och olikt förberedda personliga brev utefter jobbet du söker!<br> 
-                        <a href="./info">Här har vi samlat information om vilka vi är och hur du kommer igång!</a>  
-                        <a href="./kontakt">Vill du komma i kontakt med Agilis?</a> 
-                        </p>
-                    <h2>Registrera dig idag!</h2>
-                </div>
-                <div id="whole_form">
-                    <form id="login_form" action="/check_login" method="POST">
-                        <h3>Redan medlem? Logga in</h3>
-                            <label for="username">Email:</label>
-                            <input required type="email" id="username" name="username">
-                            <label for="password" >Lösenord:</label>
-                            <input type="password" id="password" name="password">
-                            <div>
-                                <input type="checkbox" onclick="asterixPassword()">
-                                <p>Visa lösenord</p>
-                            </div>
-                            <input class="save btn" type="submit" value="Logga in">
-                    </form>
-                    <form id="register_form" action="/register" method="POST">
-                        <h3>Registrera dig för att komma igång och söka jobb!</h3>
-                            <label for="first_name">Namn:</label>
-                            <input type="text" id="first_name" name="first_name">
-                            <label for="last_name" >Efternamn:</label>
-                            <input type="text" id="last_name" name="last_name">
-                            <label for="email" >Email:</label>
-                            <input required type="email" id="email" name="email" 
-                            title="Du måste ange e-mail med ett @...com!">
-                            <label for="password" >Lösenord:</label>
-                            <input required type="password" id="password_2" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                            title="Lösenordet måste innehålla minst en siffra och en storbokstav samt minst åtta tecken.">
-                        <div>
-                            <label><input type="checkbox" onclick="asterixPassword2()">Visa lösenord</label>
-                        </div>
-                        <input class="register_btn" type="submit" value="Registrera">
-                    </form>
-                </div>
-            </main>
-            <footer id="index_footer">
-                <p>@AgilisAB</p>
-            </footer>
-=======
 <html lang="en">
 
 <head>
@@ -68,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Agilis</title>
+    <title>Meny</title>
     <link rel="icon" href="static/logo.png" type="icon">
 
     <!-- Bootstrap -->
@@ -97,7 +35,6 @@
                 <div class="double-bounce1"></div>
                 <div class="double-bounce2"></div>
             </div>
->>>>>>> style
         </div>
     </div>
     <!-- end Preloader -->
@@ -125,6 +62,7 @@
                 <li><a href="./info">Information</a></li>
                 <li><a href="./login">Logga in/Registera dig</a></li>
                 <li><a href="./kontakt">Kontakt</a></li>
+                <li><a href="./sokjobb">Sök jobb</a></li>
 
             </ul>
         </nav>

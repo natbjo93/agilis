@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agilis_databas_tabell.sql" beforeDir="false" afterPath="$PROJECT_DIR$/agilis_databas_tabell.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/aalexjd@gmail.com/Intyg.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/anvandbarhetsanalys.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/nathaliebjornsson@hotmail.com/anvandbarhetsanalys.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/patchanasirini@gmai.com/Intyg.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/petra.svensson@live.se/anvandbarhetsanalys.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/cv_personligt_brev.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/cv_personligt_brev.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/upload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sokjobb.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/sokjobb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="232" />
           <entry key="js" value="32" />
-          <entry key="py" value="3799" />
+          <entry key="py" value="3886" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
@@ -108,7 +104,7 @@
           <entry key="HTML" value="232" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="3799" />
+          <entry key="Python" value="3886" />
         </counts>
       </usages-collector>
     </session>
@@ -118,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottle_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="214">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -496,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottle_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+        <state relative-caret-position="214">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>

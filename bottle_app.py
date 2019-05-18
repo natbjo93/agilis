@@ -31,6 +31,10 @@ def server_static(filename):
 def server_static(filepath):
     return static_file(filepath, root="static/uploads/")
 
+@route("/login")
+def login():
+    return template("login", root="static")
+
 @route("/check_login", method="POST")
 def check_login():
     '''
