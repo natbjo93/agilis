@@ -544,6 +544,25 @@ b i:last-child {
 }
 
 
+/* JOBBSIDA */
+#outside_job_div {
+    display: flex;
+    flex-flow: row;
+}
+
+#sticky_div {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+#sticky_div.stick {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
 /* mouse effect */
 
 .mouse {

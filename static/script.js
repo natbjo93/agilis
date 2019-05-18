@@ -17,74 +17,89 @@ function asterixPassword2() {
   }
 }
 
-
-// Här börjar all kod som hanterar API requesten
-var v="{{=api_response}}";
-console.log(v);
-
-function passingVariables(variable) {
-  console.log(variable);
+function sticktothetop() {
+  var window_top = $(window).scrollTop();
+  var top = $('#stick-here').offset().top;
+  if (window_top > top) {
+      $('#sticky_div').addClass('stick');
+      $('#stick-here').height($('#sticky_div').outerHeight());
+  } else {
+      $('#sticky_div').removeClass('stick');
+      $('#stick-here').height(0);
+  }
 }
+$(function() {
+  $(window).scroll(sticktothetop);
+  sticktothetop();
+});
+
+// Här börjar all kod som hanterar API requesten och skriver ut information
+function getJobAndDisplay(annonsid) {
+  const url = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + annonsid;
+
+  $.ajax({
+    url: url,
+    type: "GET",
+    success: function(result) {
+      $('#annonsrubrik').fadeOut('fast', function() {
+        
+        $(this).text(result.platsannons.annons.annonsrubrik).fadeIn('fast');
+      });
+      $('#yrkesbenamning').fadeOut('fast', function() {
+        $(this).text(result.platsannons.annons.yrkesbenamning).fadeIn('fast');
+      });
+      $('#annonstext').fadeOut('fast', function() {
+        $(this).text(result.platsannons.annons.annonstext).fadeIn('fast');
+      });
+      $('#kommunnamn').fadeOut('fast', function() {
+        $(this).text("Kommun:" + "\n" + result.platsannons.annons.kommunnamn).fadeIn('fast');
+      });
+      $('#varaktighet').fadeOut('fast', function() {
+        $(this).text(result.platsannons.villkor.varaktighet).fadeIn('fast');
+      });
+      $('#arbetstid').fadeOut('fast', function() {
+        $(this).text(result.platsannons.villkor.arbetstid).fadeIn('fast');
+      });
+      $('#lonetyp').fadeOut('fast', function() {
+        $(this).text(result.platsannons.villkor.lonetyp).fadeIn('fast');
+      });
+      $('#loneform').fadeOut('fast', function() {
+        $(this).text(result.platsannons.villkor.loneform).fadeIn('fast');
+      });
+      $('#sista_ansokningsdag').fadeOut('fast', function() {
+        const expire_date = new Date(result.platsannons.ansokan.sista_ansokningsdag).toLocaleDateString();
+        $(this).text("Sista ansökningsdag:" + "\n" + expire_date).fadeIn('fast');
+      });
+      $('#webbplats').fadeOut('fast', function() {
+        $(this).text("Ansök via:" + "\n" + result.platsannons.ansokan.webbplats).fadeIn('fast');
+        // Denna sista bit måste sitta på sista paragrafen
+        // $(this).removeProp('disabled');
+      });
+    }});
+}
+
+// Renderar första jobbet vid inladdning av sidan
+const firstJob = JSON.parse($('#btn1').attr('api_response')).matchningslista.matchningdata[0];
+getJobAndDisplay(firstJob.annonsid);
 
 $(function () {
   $("#btn1").on('click', function(e, variable) {
-    //stänger av knappen tills operationen är klar
-    $(this).prop('disabled', 'disabled');
     apiResponseObject = JSON.parse($(this).attr('api_response'));
-
     jobList = apiResponseObject.matchningslista.matchningdata;
 
-    // använd data-CurrentIndex för att lagra lokal variabel
-    var idx = $('#annonsrubrik').data('currentIndex');
+    // använd data-CurrentIndex för att lagra lokal variabel, som är var i jobblistan vi hämtar id
+    var idx = $('#btn1').data('currentIndex');
     if (idx === undefined) {
-      idx = 0;
+      idx = 1;
     }
 
-    const url = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + jobList[idx].annonsid;
-    console.log(apiResponseObject)
+    const annonsId = jobList[idx].annonsid;
 
-    // Här under hämtar vi vad vi vill ha från jsonfilen, och bestämmer i vilken div vi vill lägga datan i
-    $.ajax({
-      url: url,
-      type: "GET",
-      success: function(result) {
-        $('#annonsrubrik').fadeOut('fast', function() {
-          $(this).text(result.platsannons.annons.annonsrubrik).fadeIn('fast');
-        });
-        $('#yrkesbenamning').fadeOut('fast', function() {
-          $(this).text(result.platsannons.annons.yrkesbenamning).fadeIn('fast');
-        });
-        $('#annonstext').fadeOut('fast', function() {
-          $(this).text(result.platsannons.annons.annonstext).fadeIn('fast');
-        });
-        $('#kommunnamn').fadeOut('fast', function() {
-          $(this).text("Kommun:" + "\n" + result.platsannons.annons.kommunnamn).fadeIn('fast');
-        });
-        $('#varaktighet').fadeOut('fast', function() {
-          $(this).text(result.platsannons.villkor.varaktighet).fadeIn('fast');
-        });
-        $('#arbetstid').fadeOut('fast', function() {
-          $(this).text(result.platsannons.villkor.arbetstid).fadeIn('fast');
-        });
-        $('#lonetyp').fadeOut('fast', function() {
-          $(this).text(result.platsannons.villkor.lonetyp).fadeIn('fast');
-        });
-        $('#loneform').fadeOut('fast', function() {
-          $(this).text(result.platsannons.villkor.loneform).fadeIn('fast');
-        });
-        $('#sista_ansokningsdag').fadeOut('fast', function() {
-          const expire_date = new Date(result.platsannons.ansokan.sista_ansokningsdag).toLocaleDateString();
-          $(this).text("Sista ansökningsdag:" + "\n" + expire_date).fadeIn('fast');
-        });
-        $('#webbplats').fadeOut('fast', function() {
-          $(this).text("Ansök via:" + "\n" + result.platsannons.ansokan.webbplats).fadeIn('fast');
-          // Denna sista bit måste sitta på sista paragrafen
-          idx++;
-          $('#annonsrubrik').data('currentIndex', idx);
-          $("#btn1").removeProp('disabled');
-        });
-      }});
-  });
+    getJobAndDisplay(annonsId);
+
+    // Öka index för vilket jobb i jobblistan vi ska hämta nästa gång
+    idx++;
+    $('#btn1').data('currentIndex', idx);
+
+  });    
 });
-
-// Här slutar hanteringen av API request
