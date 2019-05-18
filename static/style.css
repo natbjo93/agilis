@@ -566,9 +566,12 @@ b i:last-child {
     position: fixed;
     top: 0;
     z-index: 9999;
-    right: 30px;
+    right: 20px;
 }
 
+#annonstext {
+    white-space: pre-line;
+}
 /* mouse effect */
 
 .mouse {
