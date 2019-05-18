@@ -21,10 +21,10 @@ function sticktothetop() {
   var window_top = $(window).scrollTop();
   var top = $('#stick-here').offset().top;
   if (window_top > top) {
-      $('#sticky_div').addClass('stick');
-      $('#stick-here').height($('#sticky_div').outerHeight());
+      $('#buttons_div').addClass('stick');
+      $('#stick-here').height($('#buttons_div').outerHeight());
   } else {
-      $('#sticky_div').removeClass('stick');
+      $('#buttons_div').removeClass('stick');
       $('#stick-here').height(0);
   }
 }

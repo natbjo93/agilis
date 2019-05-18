@@ -554,14 +554,14 @@ b i:last-child {
     width: 90%;
 }
 
-#sticky_div {
+#buttons_div {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     right: 30px;
 }
 
-#sticky_div.stick {
+#buttons_div.stick {
     margin-top: 0;
     position: fixed;
     top: 0;
@@ -572,6 +572,54 @@ b i:last-child {
 #annonstext {
     white-space: pre-line;
 }
+
+#info_div {
+    display: flex;
+    justify-content: flex-start;
+}
+.job_info_div {
+    margin-left: 2%;
+    border-left: 1px solid black;
+    padding-left: 2%;
+}
+#info_div {
+    border: 1px solid black;
+    padding: 2%;
+}
+
+#btn1, #no_btn {
+    display: inline-block;
+    margin: 6px;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.6em 1.6em;
+    font-weight: normal;
+    border-width: 0;
+    border-style: solid;
+    background: transparent;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+    user-select: none;
+    vertical-align: bottom;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-radius: 12%/50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    color: #252730;
+    background-color: #ffbf00;
+}
+
+
+#btn1:hover, #no_btn:hover {
+transform: scale(1.02);
+box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.345);
+}
+
+#buttons_div {
+    display: flex;
+    flex-flow: column;
+}
+
 /* mouse effect */
 
 .mouse {
