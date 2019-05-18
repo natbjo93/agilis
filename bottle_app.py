@@ -160,5 +160,5 @@ def uploadpb():
 
     return template("upload_success", root="static")
 
-run(host="localhost", port=8080, reloader=True)
+run(host="localhost", port=8085, reloader=True)
 
