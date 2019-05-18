@@ -70,6 +70,7 @@ function getJobAndDisplay(annonsid) {
         const expire_date = new Date(result.platsannons.ansokan.sista_ansokningsdag).toLocaleDateString();
         $(this).text("Sista ansökningsdag:" + "\n" + expire_date).fadeIn('fast');
       });
+      $('#apply').attr('action', result.platsannons.ansokan.webbplats);
       $('#webbplats').fadeOut('fast', function() {
         $(this).text("Ansök via:" + "\n" + result.platsannons.ansokan.webbplats).fadeIn('fast');
         // Denna sista bit måste sitta på sista paragrafen
@@ -83,12 +84,12 @@ const firstJob = JSON.parse($('#btn1').attr('api_response')).matchningslista.mat
 getJobAndDisplay(firstJob.annonsid);
 
 $(function () {
-  $("#btn1").on('click', function(e, variable) {
-    apiResponseObject = JSON.parse($(this).attr('api_response'));
+  $("#no_btn").on('click', function(e, variable) {
+    apiResponseObject = JSON.parse($(btn1).attr('api_response'));
     jobList = apiResponseObject.matchningslista.matchningdata;
 
     // använd data-CurrentIndex för att lagra lokal variabel, som är var i jobblistan vi hämtar id
-    var idx = $('#btn1').data('currentIndex');
+    var idx = $('#no_btn').data('currentIndex');
     if (idx === undefined) {
       idx = 1;
     }
@@ -99,7 +100,8 @@ $(function () {
 
     // Öka index för vilket jobb i jobblistan vi ska hämta nästa gång
     idx++;
-    $('#btn1').data('currentIndex', idx);
+    $('#no_btn').data('currentIndex', idx);
 
   });    
 });
+
