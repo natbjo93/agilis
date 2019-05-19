@@ -157,7 +157,7 @@ def uploadcv():
     cursor.execute("update profil set cv = '{}' where email = '{}'".format(file_path, user_email))
     conn.commit()
 
-    return template("upload_success", root="static")
+    return redirect("/profil")
 
 
 @route("/uploadpb", method="POST")
@@ -181,7 +181,7 @@ def uploadpb():
     cursor.execute("insert into personligabrev(id, email, pb) values ('{}', '{}', '{}')".format(uuid.uuid4(), user_email, file_path))
     conn.commit()
 
-    return template("upload_success", root="static")
+    return redirect("/profil")
 
 run(host="localhost", port=8088, reloader=True)
 

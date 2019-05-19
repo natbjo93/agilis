@@ -17,31 +17,58 @@ function asterixPassword2() {
   }
 }
 
+/* CV */
+var modalCV = document.getElementById("myModalCV");
 
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("pic_btn");
-
+$("#CV_btn").on('click', function(e, variable) {
+  modalCV.style.display = "block";
+});
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+var spanCV = document.getElementsByClassName("closeCV")[0];
+// When the user clicks on <span> (x), close the modal
+spanCV.onclick = function() {
+  modalCV.style.display = "none";
 }
 
+/* PB */
+var modalPB = document.getElementById("myModalPB");
+
+$("#PB_btn").on('click', function(e, variable) {
+  modalPB.style.display = "block";
+});
+// Get the <span> element that closes the modal
+var spanPB = document.getElementsByClassName("closePB")[0];
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+spanPB.onclick = function() {
+  modalPB.style.display = "none";
+}
+
+/* PIC */
+var modalPIC = document.getElementById("myModalPIC");
+
+$("#pic_btn").on('click', function(e, variable) {
+  modalPIC.style.display = "block";
+});
+// Get the <span> element that closes the modal
+var spanPIC = document.getElementsByClassName("closePIC")[0];
+// When the user clicks on <span> (x), close the modal
+spanPIC.onclick = function() {
+  modalPIC.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modalCV) {
+    modalCV.style.display = "none";
+  }
+  else if (event.target == modalPB) {
+    modalPB.style.display = "none";
+  }
+  else if (event.target == modalPIC) {
+    modalPIC.style.display = "none";
   }
 }
+
 
 /* Jobbknappar att stanna vid scroll */
 function sticktothetop() {

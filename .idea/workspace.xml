@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agilis_databas_tabell.sql" beforeDir="false" afterPath="$PROJECT_DIR$/agilis_databas_tabell.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/ronja@hotmail.com/Agilis.poster.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/ronja@hotmail.com/DBrapport-1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/ronja@hotmail.com/Intyg.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/ronja@hotmail.com/svar.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profil.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +94,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="232" />
           <entry key="js" value="32" />
-          <entry key="py" value="4284" />
+          <entry key="py" value="4320" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
@@ -108,7 +103,7 @@
           <entry key="HTML" value="232" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="4284" />
+          <entry key="Python" value="4320" />
         </counts>
       </usages-collector>
     </session>
@@ -118,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottle_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="185" column="31" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
+            <state relative-caret-position="214">
+              <caret line="122" column="30" lean-forward="true" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -492,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottle_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="185" column="31" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
+        <state relative-caret-position="214">
+          <caret line="122" column="30" lean-forward="true" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>

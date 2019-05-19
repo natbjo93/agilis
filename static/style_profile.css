@@ -62,15 +62,17 @@ hr {
   }
   
   /* The Close Button */
-  .close {
+  .closeCV, .closePB, .closePIC {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .closeCV:hover,
+  .closeCV:focus, .closePB:hover,
+  .closePB:focus, .closePIC:hover,
+  .closePIC:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -81,7 +83,7 @@ hr {
     height: 300px;
 }
 
-#pic_btn {
-    width: 40%;
-    font-size: 70%;
+.profile_btns {
+    background-color: #ffbf00;
+    color: rgb(79, 79, 79);
 }
