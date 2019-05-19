@@ -97,16 +97,36 @@ def info():
 @route("/profil")
 def profil():
     username = request.get_cookie('account', secret='123')
-    cursor.execute("select first_name, last_name, email from profil where email= '" + (username) + "'")
-    namelist = cursor.fetchone()
-    first_name = namelist[0]
-    last_name = namelist[1]
-    email = namelist[2]
-    
     if username:
-        return template("profil", root="static", first_name = first_name, last_name = last_name, email = email)
+        cursor.execute("select first_name, last_name, email, profile_pic from profil where email= '" + (username) + "'")
+        namelist = cursor.fetchone()
+        print(namelist)
+        first_name = namelist[0]
+        last_name = namelist[1]
+        email = namelist[2]
+        profile_pic = namelist[3]
+        return template("profil", root="static", first_name = first_name, last_name = last_name, email = email, profile_pic = profile_pic)
     else:
         return redirect("/login")
+
+@route("/uploadpic", method="POST")
+def uploadpic():
+    user_email = request.get_cookie('account', secret="123")
+
+    upload = request.files.get('filename')
+    name, ext = os.path.splitext(upload.filename)
+    if ext not in ('.jpg'):
+        return "File extension not allowed."
+
+    save_path = "static/uploads/{}".format(user_email)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
+    upload.save(file_path)
+    cursor.execute("update profil set profile_pic = '{}' where email = '{}'".format(file_path, user_email))
+    conn.commit()
+    return redirect("/profil")
 
 @route("/cv_personligt_brev")
 def cv():
@@ -163,5 +183,5 @@ def uploadpb():
 
     return template("upload_success", root="static")
 
-run(host="localhost", port=8087, reloader=True)
+run(host="localhost", port=8088, reloader=True)
 
