@@ -620,6 +620,13 @@ box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.345);
     flex-flow: column;
 }
 
+/* KONTAKTSIDA */
+.form_email {
+    text-align: center;
+    padding: 5px;
+}
+
+
 /* mouse effect */
 
 .mouse {
