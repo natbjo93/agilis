@@ -15,6 +15,7 @@
 
     <!-- main css -->
     <link href="static/style.css" rel="stylesheet">
+    <link href="static/style_profile.css" rel="stylesheet">
 
 
     <!-- modernizr -->
@@ -76,27 +77,45 @@
     
     <!-- Main container -->
     <div class="container main-container clearfix"> 
-            <h2>Profil</h2>
-            <img src="static/proffbild.jpg" alt="bild på profil" id="profilbild">
-            <h3>Hej {{ first_name }} och välkommen till din profil sida hos Agilis! </h3>
-            <p><em>Här kommer du att ha bra koll på dina personliga brev, CV och sparade jobbannonser.</em></p>
-            <p>
-                Namn:<p>{{ first_name }} {{ last_name }}</p><br>
-                E-postadress:<p> {{ email }}</p><br> 
-            </p>
-            <div id="letters_div">
-                <ul>
-                    <li>
-                        <a href="./cv_personligt_brev">Ladda upp CV</a>
-                    </li>
-                    <li>
-                        <a href="./cv_personligt_brev">Personliga brev</a></li>
-                        <p>Du kan ladda upp mer än ett!</p>
-                    <li>
-                        <a href="./sparade_cv_pb">Mina sparade jobbannonser
-                    </li>
-                </ul>
+        <div id="profile_main_div">
+            <div id="left_profile_div">
+                <div id="profile_text_div">
+                    <h2>Profil</h2>
+                    <h3>Hej {{ first_name }} och välkommen till din profil sida hos Agilis! </h3>
+                    <p><em>Här kommer du att ha bra koll på dina personliga brev, CV och sparade jobbannonser.</em></p>
+                    <hr>
+                </div>
+                <div id="main_letters_div">
+                    <div id="letters_display_div">
+                        <h3>Sparade</h3>
+                        <ul>
+                            <li>Mitt CV:</li>
+                            <li>Mina personliga brev:</li>
+                            <li><a href="./sparade_cv_pb">Mina sparade jobbannonser</li>               
+                        </ul>
+                    </div>
+                    <div id="letters_upload_div">
+                        <h3>Ladda upp</h3>
+                        <ul>
+                            <li>
+                                <a href="./cv_personligt_brev">Ladda upp CV</a>
+                            </li>
+                            <li>
+                                <a href="./cv_personligt_brev">Ladda upp personliga brev</a></li>
+                                <p>Du kan ladda upp mer än ett personligt brev!</p>
+                        </ul>
+                    </div>  
+                </div>                      
             </div>
+            <div id="right_profile_div">
+                <img src="static/proffbild.jpg" alt="bild på profil" id="profilbild">
+                <p>
+                    Namn: {{ first_name }} {{ last_name }}<br>
+                    E-postadress: {{ email }}
+                </p>
+                <p><em>Ändra lösenord</em></p>
+            </div>
+        </div>
     </div>
 
     
