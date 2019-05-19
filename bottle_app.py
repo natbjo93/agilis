@@ -100,6 +100,13 @@ def profil():
     cursor.execute("select first_name from profil where email= '" + (username) + "'")
     namelist = cursor.fetchone()
     first_name = namelist[0]
+
+    '''
+    cursor.execute("select last_name from profil where email= '" + (username) + "'")
+    namelist = cursor.fetchone()
+    last_name = namelist[1]
+    '''
+    
     if username:
         return template("profil", root="static", first_name = first_name)
     else:
