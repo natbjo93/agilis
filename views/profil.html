@@ -108,7 +108,22 @@
                 </div>                      
             </div>
             <div id="right_profile_div">
-                <img src="static/proffbild.jpg" alt="bild på profil" id="profilbild">
+                <img src="{{ profile_pic }}" alt="Du har ej valt en bild än" id="profilbild">
+                <!-- Trigger/Open The Modal -->
+                <button id="pic_btn">Ladda upp bild</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form enctype="multipart/form-data" action="/uploadpic" method="POST">
+                        <p>File: <input type="file" name="filename"/> </p>
+                        <p><input type="submit" value="upload"/> </p>
+                    </form>
+                </div>
+                </div>
                 <p>
                     Namn: {{ first_name }} {{ last_name }}<br>
                     E-postadress: {{ email }}
@@ -152,6 +167,7 @@
 
     <!--  custom script -->
     <script src="static/custom.js"></script>
+    <script src="static/script.js"></script>
 
 </body>
 
