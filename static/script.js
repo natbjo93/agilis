@@ -23,25 +23,25 @@ var modalCV = document.getElementById("myModalCV");
 $("#CV_btn").on('click', function(e, variable) {
   modalCV.style.display = "block";
 });
-// Get the <span> element that closes the modal
-var spanCV = document.getElementsByClassName("closeCV")[0];
+
 // When the user clicks on <span> (x), close the modal
-spanCV.onclick = function() {
+$('.closeCV').on('click', function () {
   modalCV.style.display = "none";
-}
+}) 
 
 /* PB */
 var modalPB = document.getElementById("myModalPB");
 
 $("#PB_btn").on('click', function(e, variable) {
-  modalPB.style.display = "block";
+  $('#myModalPB').show()
+  // modalPB.style.display = "block";
 });
-// Get the <span> element that closes the modal
-var spanPB = document.getElementsByClassName("closePB")[0];
+
 // When the user clicks on <span> (x), close the modal
-spanPB.onclick = function() {
-  modalPB.style.display = "none";
-}
+$('.closePB').on('click', function () {
+  // modalCV.style.display = "none";
+  $('#myModalPB').hide();
+}) 
 
 /* PIC */
 var modalPIC = document.getElementById("myModalPIC");
@@ -49,23 +49,23 @@ var modalPIC = document.getElementById("myModalPIC");
 $("#pic_btn").on('click', function(e, variable) {
   modalPIC.style.display = "block";
 });
-// Get the <span> element that closes the modal
-var spanPIC = document.getElementsByClassName("closePIC")[0];
+
 // When the user clicks on <span> (x), close the modal
-spanPIC.onclick = function() {
-  modalPIC.style.display = "none";
-}
+$('.closePIC').on('click', function () {
+  $('#myModalPIC').hide();
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modalCV) {
+  if (event.target == $('#myModalCV')[0]) {
     modalCV.style.display = "none";
+    $('#myModalCV').hide();
   }
-  else if (event.target == modalPB) {
-    modalPB.style.display = "none";
+  else if (event.target == $('#myModalPB')[0]) {
+    $('#myModalPB').hide();
   }
-  else if (event.target == modalPIC) {
-    modalPIC.style.display = "none";
+  else if (event.target == $('#myModalPIC')[0]) {
+    $('#myModalPIC').hide();
   }
 }
 
@@ -135,6 +135,7 @@ function getJobAndDisplay(annonsid) {
 
 // Renderar första jobbet vid inladdning av sidan
 const firstJob = JSON.parse($('#btn1').attr('api_response')).matchningslista.matchningdata[0];
+
 getJobAndDisplay(firstJob.annonsid);
 
 $(function () {
