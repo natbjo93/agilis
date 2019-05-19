@@ -97,18 +97,14 @@ def info():
 @route("/profil")
 def profil():
     username = request.get_cookie('account', secret='123')
-    cursor.execute("select first_name from profil where email= '" + (username) + "'")
+    cursor.execute("select first_name, last_name, email from profil where email= '" + (username) + "'")
     namelist = cursor.fetchone()
     first_name = namelist[0]
-
-    '''
-    cursor.execute("select last_name from profil where email= '" + (username) + "'")
-    namelist = cursor.fetchone()
     last_name = namelist[1]
-    '''
+    email = namelist[2]
     
     if username:
-        return template("profil", root="static", first_name = first_name)
+        return template("profil", root="static", first_name = first_name, last_name = last_name, email = email)
     else:
         return redirect("/login")
 
