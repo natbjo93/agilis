@@ -20,3 +20,7 @@ create table personligabrev
  primary key (id),
  foreign key (email) references profil(email));
 
+create table sparadejobb
+(email      varchar(255),
+annonsrubrik  varchar(255),
+primary key (email, annonsrubrik));
