@@ -80,40 +80,6 @@ a {
     font-size: 11px;
 }
 
-  #whole_form {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: auto;
-}
-
-#register_form, #login_form {
-    display: flex;
-    flex-flow: column;
-    background-color: #ffffffb5;
-    padding: 5%;
-    width: 100%;
-    margin: 2%;
-    border-radius: 1%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#register_form:hover, #login_form:hover {
-    box-shadow: 0 4px 8px 0 rgb(89, 89, 89), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#register_form > input{
-    margin-bottom: 4%;
-    padding: 2%;
-    width: 100%;
-}
-
-#login_form > input {
-    margin-bottom: 4%;
-    padding: 2%;
-    width: 100%;
-}
 
 
 /* typography
