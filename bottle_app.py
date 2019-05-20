@@ -112,16 +112,13 @@ def profil():
 @route("/uploadpic", method="POST")
 def uploadpic():
     user_email = request.get_cookie('account', secret="123")
-
     upload = request.files.get('filename')
     name, ext = os.path.splitext(upload.filename)
     if ext not in ('.jpg'):
         return "File extension not allowed."
-
     save_path = "static/uploads/{}".format(user_email)
     if not os.path.exists(save_path):
         os.makedirs(save_path)
-
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
     cursor.execute("update profil set profile_pic = '{}' where email = '{}'".format(file_path, user_email))
@@ -141,24 +138,19 @@ def uploadcv():
     '''
     Till för filuppladdning av CV
     '''
-    user_email = request.get_cookie('account', secret="123")
-        
+    user_email = request.get_cookie('account', secret="123")    
     upload = request.files.get('filename')
     name, ext = os.path.splitext(upload.filename)
     if ext not in ('.pdf'):
         return "File extension not allowed."
-
     save_path = "static/uploads/{}".format(user_email)
     if not os.path.exists(save_path):
         os.makedirs(save_path)
-
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
     cursor.execute("update profil set cv = '{}' where email = '{}'".format(file_path, user_email))
     conn.commit()
-
     return redirect("/profil")
-
 
 @route("/uploadpb", method="POST")
 def uploadpb():
@@ -166,21 +158,17 @@ def uploadpb():
     Till för filuppladdning av Personliga brev
     '''
     user_email = request.get_cookie('account', secret="123")
-
     upload = request.files.get('filename')
     name, ext = os.path.splitext(upload.filename)
     if ext not in ('.pdf'):
         return "File extension not allowed."
-
     save_path = "static/uploads/{}".format(user_email)
     if not os.path.exists(save_path):
         os.makedirs(save_path)
-
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     print(uuid.uuid4())
     cursor.execute("insert into personligabrev(id, email, pb) values ('{}', '{}', '{}')".format(uuid.uuid4(), user_email, file_path))
     conn.commit()
-
     return redirect("/profil")
 
 run(host="localhost", port=8089, reloader=True)

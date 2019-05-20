@@ -5,31 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Agilis</title>
     <link rel="icon" href="static/logo.png" type="icon">
-
-    <!-- Bootstrap -->
     <link href="static/bootstrap.min.css" rel="stylesheet">
     <link href="static/ionicons.min.css" rel="stylesheet">
-
-    <!-- main css -->
     <link href="static/style.css" rel="stylesheet">
     <link href="static/style_profile.css" rel="stylesheet">
-
-
-    <!-- modernizr -->
     <script src="static/modernizr.js"></script>
-    
-   
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
- 
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 
 <body>
-
-    <!-- Preloader -->
     <div id="preloader">
         <div class="pre-container">
             <div class="spinner">
@@ -38,23 +25,15 @@
             </div>
         </div>
     </div>
-    <!-- end Preloader -->
-
     <div class="container-fluid">
-        <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
                 <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
             </div>
-            <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
-            <!-- box-primary-nav-trigger -->
         </header>
-        <!-- end box header -->
-
-        <!-- nav -->
         <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">Agilis</li>
@@ -67,125 +46,91 @@
                 <li><a href="./signout">Logga ut</a></li>
             </ul>
         </nav>
-        <!-- end nav -->
-        <!-- Top bar -->
-    <div class="top-bar">
-        <h1>Profil</h1>
-        <p><a href="./">Hem</a> / Information</p>
-    </div>
-    <!-- end Top bar -->
-    
-    <!-- Main container -->
-    <div class="container main-container clearfix"> 
-        <div id="profile_main_div">
-            <div id="left_profile_div">
-                <div id="profile_text_div">
-                    <h2>Profil</h2>
-                    <h3>Hej {{ first_name }} och välkommen till din profil sida hos Agilis! </h3>
-                    <p><em>Här kommer du att ha bra koll på dina personliga brev, CV och sparade jobbannonser.</em></p>
-                    <hr>
-                </div>
-                <div id="main_letters_div">
-                    <div id="letters_display_div">
-                        <h3>Sparade</h3>
-                        <ul>
-                            <li>Mitt CV:</li>
-                            <li>Mina personliga brev:</li>
-                            <li><a href="./sparade_cv_pb">Mina sparade jobbannonser</a></li>               
-                        </ul>
+        <div class="top-bar">
+            <h1>Profil</h1>
+            <p><a href="./">Hem</a> / Information</p>
+        </div>
+        <div class="container main-container clearfix">
+            <div id="profile_main_div">
+                <div id="left_profile_div">
+                    <div id="profile_text_div">
+                        <h2>Profil</h2>
+                        <h3>Hej {{ first_name }} och välkommen till din profil sida hos Agilis! </h3>
+                        <p><em>Här kommer du att ha bra koll på dina personliga brev, CV och sparade jobbannonser.</em>
+                        </p>
+                        <hr>
                     </div>
-                    <div id="letters_upload_div">
-                        <!-- Trigger/Open The Modal -->
-                        <button id="CV_btn" class="profile_btns">Ladda upp  CV</button>
-                        <!-- The Modal -->
-                        <div id="myModalCV" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="closeCV">&times;</span>
-                                <form enctype="multipart/form-data" action="/uploadcv" method="POST">
-                                    <p>File: <input type="file" name="filename"/> </p>
-                                    <p><input type="submit" value="upload"/> </p>
-                                </form>
-                            </div>
+                    <div id="main_letters_div">
+                        <div id="letters_display_div">
+                            <h3>Sparade</h3>
+                            <ul>
+                                <li>Mitt CV:</li>
+                                <li>Mina personliga brev:</li>
+                                <li><a href="./sparade_cv_pb">Mina sparade jobbannonser</a></li>
+                            </ul>
                         </div>
-                            <!-- Trigger/Open The Modal -->
-                        <button id="PB_btn" class="profile_btns">Ladda upp personligt brev</button>
-                        <!-- The Modal -->
-                        <div id="myModalPB" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="closePB">&times;</span>
-                                <form enctype="multipart/form-data" action="/uploadpb" method="POST">
-                                    <p>File: <input type="file" name="filename"/> </p>
-                                    <p><input type="submit" value="upload"/> </p>
-                                </form>
+                        <div id="letters_upload_div">
+                            <button id="CV_btn" class="profile_btns">Ladda upp CV</button>
+                            <div id="myModalCV" class="modal">
+                                <div class="modal-content">
+                                    <span class="closeCV">&times;</span>
+                                    <form enctype="multipart/form-data" action="/uploadcv" method="POST">
+                                        <p>File: <input type="file" name="filename" /> </p>
+                                        <p><input type="submit" value="upload" /> </p>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                            <button id="PB_btn" class="profile_btns">Ladda upp personligt brev</button>
+                            <div id="myModalPB" class="modal">
+                                <div class="modal-content">
+                                    <span class="closePB">&times;</span>
+                                    <form enctype="multipart/form-data" action="/uploadpb" method="POST">
+                                        <p>File: <input type="file" name="filename" /> </p>
+                                        <p><input type="submit" value="upload" /> </p>
+                                    </form>
+                                </div>
+                            </div>
                             <p>Du kan ladda upp mer än ett personligt brev!</p>
-                    </div>  
-                </div>                      
-            </div>
-            <div id="right_profile_div">
-                <img src="{{ profile_pic }}" alt="Du har ej valt en bild än" id="profilbild">
-                <!-- Trigger/Open The Modal -->
-                <button id="pic_btn" class="profile_btns">Ladda upp bild</button>
-                <!-- The Modal -->
-                <div id="myModalPIC" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="closePIC">&times;</span>
-                        <form enctype="multipart/form-data" action="/uploadpic" method="POST">
-                            <p>File: <input type="file" name="filename"/> </p>
-                            <p><input type="submit" value="upload"/> </p>
-                        </form>
+                        </div>
                     </div>
-                </div>  
-                <p>
-                    Namn: {{ first_name }} {{ last_name }}<br>
-                    E-postadress: {{ email }}
-                </p>
-                <p><em>Ändra lösenord</em></p>
+                </div>
+                <div id="right_profile_div">
+                    <img src="{{ profile_pic }}" alt="Du har ej valt en bild än" id="profilbild">
+                    <button id="pic_btn" class="profile_btns">Ladda upp bild</button>
+                    <div id="myModalPIC" class="modal">
+                        <div class="modal-content">
+                            <span class="closePIC">&times;</span>
+                            <form enctype="multipart/form-data" action="/uploadpic" method="POST">
+                                <p>File: <input type="file" name="filename" /> </p>
+                                <p><input type="submit" value="upload" /> </p>
+                            </form>
+                        </div>
+                    </div>
+                    <p>
+                        Namn: {{ first_name }} {{ last_name }}<br>
+                        E-postadress: {{ email }}
+                    </p>
+                    <p><em>Ändra lösenord</em></p>
+                </div>
             </div>
         </div>
-    </div>
-
-    
-    <br>
-    <center>
-        Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.
-    </center>
-    <!-- end Main container -->
-
-       
-
- 
-    <footer>
-        <div class="container-fluid">
-            <p class="copyright">@AgilisAB</p>
-        </div>
-    </footer>
-    <!-- end footer -->
-
-    <!-- back to top -->
-    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
-    <!-- end back to top -->
-
-
-
-    <!-- jQuery -->
-    <script src="static/jquery-2.1.1.js"></script>
-    <!--  plugins -->
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/menu.js"></script>
-    <script src="static/animated-headline.js"></script>
-    <script src="static/isotope.pkgd.min.js"></script>
-
-
-    <!--  custom script -->
-    <script src="static/custom.js"></script>
-    <script src="static/script.js"></script>
-
+        <br>
+        <center>
+            Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.
+        </center>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">@AgilisAB</p>
+            </div>
+        </footer>
+        <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+        <script src="static/jquery-2.1.1.js"></script>
+        <script src="static/bootstrap.min.js"></script>
+        <script src="static/menu.js"></script>
+        <script src="static/animated-headline.js"></script>
+        <script src="static/isotope.pkgd.min.js"></script>
+        <script src="static/custom.js"></script>
+        <script src="static/script.js"></script>
 </body>
 
 </html>
-
