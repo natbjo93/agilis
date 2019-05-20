@@ -461,7 +461,7 @@ b i:last-child {
 }
 
 
-/* JOBBSIDA */
+/* JOBBSIDA *//*
 #outside_job_div {
     display: flex;
     flex-flow: row;
@@ -535,7 +535,7 @@ box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.345);
 #buttons_div {
     display: flex;
     flex-flow: column;
-}
+}*/
 
 /* KONTAKTSIDA */
 .form_email {
