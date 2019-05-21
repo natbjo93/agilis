@@ -461,7 +461,7 @@ b i:last-child {
 }
 
 
-/* JOBBSIDA */
+/* JOBBSIDA *//*
 #outside_job_div {
     display: flex;
     flex-flow: row;
@@ -535,7 +535,7 @@ box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.345);
 #buttons_div {
     display: flex;
     flex-flow: column;
-}
+}*/
 
 /* KONTAKTSIDA */
 .form_email {
@@ -985,8 +985,8 @@ footer img {
 .top-bar {
     color: #333;
     padding: 150px 0 150px;
-    background: -webkit-linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../static/01.jpg);
-    background: linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../static/01.jpg);
+    background: -webkit-linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../static/info.png);
+    background: linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../static/info.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
