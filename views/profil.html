@@ -75,7 +75,7 @@
                                     <span class="closeCV">&times;</span>
                                     <form enctype="multipart/form-data" action="/uploadcv" method="POST">
                                         <p>File: <input type="file" name="filename" /> </p>
-                                        <p><input type="submit" value="upload" /> </p>
+                                        <p><input type="submit" value="Ladda upp pdf" /> </p>
                                     </form>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                                     <span class="closePB">&times;</span>
                                     <form enctype="multipart/form-data" action="/uploadpb" method="POST">
                                         <p>File: <input type="file" name="filename" /> </p>
-                                        <p><input type="submit" value="upload" /> </p>
+                                        <p><input type="submit" value="Ladda upp pdf" /> </p>
                                     </form>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                             <span class="closePIC">&times;</span>
                             <form enctype="multipart/form-data" action="/uploadpic" method="POST">
                                 <p>File: <input type="file" name="filename" /> </p>
-                                <p><input type="submit" value="upload" /> </p>
+                                <p><input type="submit" value="Ladda upp bild" /> </p>
                             </form>
                         </div>
                     </div>
@@ -109,7 +109,19 @@
                         Namn: {{ first_name }} {{ last_name }}<br>
                         E-postadress: {{ email }}
                     </p>
-                    <p><em>Ändra lösenord</em></p>
+                    <button id="PW_btn" class="profile_btns">Ändra lösenord</button>
+                    <div id="myModalPW" class="modal">
+                        <div class="modal-content">
+                            <span class="closePW">&times;</span>
+                            <form action="/change_pw" method="POST">
+                                <label for="password">Nytt lösenord</label>
+                                <input required type="password" id="password_2" name="password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Lösenordet måste innehålla minst en siffra och en storbokstav samt minst åtta tecken.">
+                                <p><input type="submit" value="Ändra lösenord" /> </p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

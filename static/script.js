@@ -55,6 +55,18 @@ $('.closePIC').on('click', function () {
   $('#myModalPIC').hide();
 });
 
+/* PW */
+var modalPW = document.getElementById("myModalPW");
+
+$("#PW_btn").on('click', function(e, variable) {
+  modalPW.style.display = "block";
+});
+
+// When the user clicks on <span> (x), close the modal
+$('.closePW').on('click', function () {
+  modalPW.style.display = "none";
+}) 
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == $('#myModalCV')[0]) {
