@@ -72,8 +72,14 @@
                 <h1>Sparade CV och personligt brev</h1>
                 <p><a href="./">Hem</a> / <a href="./sokjobb">Sök Jobb</a></p>
             </div>
+
+            <div id="sparadeJobb">
+
+            </div>
     <main id="index_main">
-        <h3>Tack för att du sparar allt hos oss!!</h3>
+        % for  email, annonsrubrik in data:
+        <a href= "/sokjobb{{ i[email, annonsrubrik] }}">{{ i[email, annonsrubrik] }}</a>
+        <h3>Tack för att du sparar allt hos oss!! {{ email, annonsrubrik }}</h3>
         <a href="static/uploads/nathaliebjornsson@hotmail.com/da336a_instruktioner_testdag.pdf">PDF</a>
         
         <p><b>Tillbaka till din <a href="./profil" >profil</a> eller vill du ladda upp fler <a href="./cv_personligt_brev" >CV eller personligt brev?</b></a></p>
