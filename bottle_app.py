@@ -155,24 +155,17 @@ def uploadcv():
     conn.commit()
     return redirect("/profil")
 
-@route("/uploadpb", method="POST")
-def uploadpb():
+@route("/change_pw", method="POST")
+def change_pw():
     '''
-    Till för filuppladdning av Personliga brev
+    Ändra lösenord
     '''
     user_email = request.get_cookie('account', secret="123")
-    upload = request.files.get('filename')
-    name, ext = os.path.splitext(upload.filename)
-    if ext not in ('.pdf'):
-        return "File extension not allowed."
-    save_path = "static/uploads/{}".format(user_email)
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
-    print(uuid.uuid4())
-    cursor.execute("insert into personligabrev(id, email, pb) values ('{}', '{}', '{}')".format(uuid.uuid4(), user_email, file_path))
+    password = getattr(request.forms, "password")
+    cursor.execute("update profil set losen = '{}' where email = '{}'".format(password, user_email))
     conn.commit()
+
     return redirect("/profil")
 
-run(host="localhost", port=8080, reloader=True)
+run(host="localhost", port=8089, reloader=True)
 

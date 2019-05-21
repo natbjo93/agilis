@@ -23,6 +23,10 @@ PROFILSIDANS CSS
     display: flex;
 }
 
+#letters_upload_div {
+    margin-left: 7%;
+}
+
 #profilbild {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -66,7 +70,7 @@ hr {
   }
   
   /* The Close Button */
-  .closeCV, .closePB, .closePIC {
+  .closeCV, .closePB, .closePIC, .closePW {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -76,7 +80,8 @@ hr {
   .closeCV:hover,
   .closeCV:focus, .closePB:hover,
   .closePB:focus, .closePIC:hover,
-  .closePIC:focus {
+  .closePIC:focus, .closePW:hover,
+  .closePW:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -90,4 +95,9 @@ hr {
 .profile_btns {
     background-color: #ffbf00;
     color: rgb(79, 79, 79);
+}
+
+#CV_btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
