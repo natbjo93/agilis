@@ -65,7 +65,7 @@ def register():
     query = "insert into profil(email, first_name, last_name, losen) values (%s, %s, %s, %s)"
     cursor.execute(query, [str(email), str(first_name), str(last_name), str(password)])
     conn.commit()
-    return template("index", root="static")
+    return template("login", root="static")
 
 @route("/sokjobb")
 def sok_jobb():

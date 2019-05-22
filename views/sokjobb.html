@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -25,89 +26,107 @@
             <div class="spinner">
                 <div class="double-bounce1"></div>
                 <div class="double-bounce2"></div>
+=======
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Agilis</title>
+        <link rel="icon" href="static/logo.png" type="icon">
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <link href="static/ionicons.min.css" rel="stylesheet">
+        <link href="static/style_sokjobb.css" rel="stylesheet">
+        <link href="static/style.css" rel="stylesheet">
+        <script src="static/modernizr.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    </head>
+    <body>
+        <div id="preloader">
+            <div class="pre-container">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+>>>>>>> 839a6fb8c446c4b8857f7aa762aa22fca028189c
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
-            </div>
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-        </header>
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label">Agilis</li>
-                <li><a href="./">Agilis</a></li>
-                <li><a href="./profil">Profil</a></li>
-                <li><a href="./sokjobb">Sök jobb</a></li>
-                <li><a href="./info">Information</a></li>
-                <li><a href="./kontakt">Kontakt</a></li>
-                <li><a id="login_or_logout" href="./login">Logga ut</a></li>
-            </ul>
-        </nav>
-    <div class="top-bar">
-        <h1>Sök jobb</h1>
-        <p><a href="./">Hem</a> / Information</p>
-    </div>
-    <div class="container main-container clearfix"> 
-        <h2>Sök Jobb</h2>
-        <div id="outside_job_div">
-            <div id="job_search">
-                <div id="entire_job_div">
-                    <h2 id="annonsrubrik"></h2>
-                    <p id="yrkesbenamning"></p>
-                    <p id="annonstext"></p>
-                    <p id="kommunnamn"></p>
-                    <div id="info_div">
-                        <div id="job_time_div">
-                            <p id="varaktighet"></p>
-                            <p id="arbetstid"></p>
-                        </div>
-                        <div class="job_info_div">
-                            <p id="lonetyp"></p>
-                            <p id="loneform"></p>
-                        </div>
-                        <div class="job_info_div">
-                            <p id="sista_ansokningsdag"></p>
-                            <p id="webbplats"></p>
+        <div class="container-fluid">
+            <header class="box-header">
+                <div class="box-logo">
+                    <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
+                </div>
+                <a class="box-primary-nav-trigger" href="#0">
+                    <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                </a>
+            </header>
+            <nav>
+                <ul class="box-primary-nav">
+                    <li class="box-label">Agilis</li>
+                    <li><a href="./">Startsida</a></li>
+                    <li><a href="./profil">Profil</a></li>
+                    <li><a href="./sokjobb">Sök jobb</a></li>
+                    <li><a href="./info">Om oss</a></li>
+                    <li><a href="./kontakt">Kontakt</a></li>
+                    <li><a id="login_or_logout" href="./login">Logga ut</a></li>
+                </ul>
+            </nav>
+        <div class="top-bar">
+            <h1>Sök jobb</h1>
+            <p><a href="./">Hem</a> / Information</p>
+        </div>
+        <div class="container main-container clearfix"> 
+            <h2>Sök Jobb</h2>
+            <div id="outside_job_div">
+                <div id="job_search">
+                    <div id="entire_job_div">
+                        <h2 id="annonsrubrik"></h2>
+                        <p id="yrkesbenamning"></p>
+                        <p id="annonstext"></p>
+                        <p id="kommunnamn"></p>
+                        <div id="info_div">
+                            <div id="job_time_div">
+                                <p id="varaktighet"></p>
+                                <p id="arbetstid"></p>
+                            </div>
+                            <div class="job_info_div">
+                                <p id="lonetyp"></p>
+                                <p id="loneform"></p>
+                            </div>
+                            <div class="job_info_div">
+                                <p id="sista_ansokningsdag"></p>
+                                <p id="webbplats"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="stick-here"></div>
-            <div id="buttons_div">
-                <form id="apply" target="_blank">
-                    <input type="submit" value="Ansök" id="btn1" api_response="{{api_response}}">   
-                </form>
-                <button id="no_btn">Nästa jobb</button>
+                <div id="stick-here"></div>
+                <div id="buttons_div">
+                    <form id="apply" target="_blank">
+                        <input type="submit" value="Ansök" id="btn_1" api_response="{{api_response}}">   
+                    </form>
+                    <button id="no_btn">Nästa jobb</button>
                     <button id="no_btn">Spara Jobb</button>
                     <button id="no_btn">Avbryt</button>
-
+                </div>
             </div>
-        </div>
-    <br>
-    <center>
-        Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.
-    </center>
-    <footer>
-        <div class="container-fluid">
-            <p class="copyright">@AgilisAB</p>
-        </div>
-    </footer>
-    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
-    <script src="static/jquery-2.1.1.js"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/menu.js"></script>
-    <script src="static/animated-headline.js"></script>
-    <script src="static/isotope.pkgd.min.js"></script>
-    <script src="static/custom.js"></script>
-    <script src="static/script.js"></script>
-    <script src="static/cookieCheck.js"></script>
-</body>
-
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">@AgilisAB</p>
+                <p>Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.</p>
+            </div>
+        </footer>
+        <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+        <script src="static/jquery-2.1.1.js"></script>
+        <script src="static/bootstrap.min.js"></script>
+        <script src="static/menu.js"></script>
+        <script src="static/animated-headline.js"></script>
+        <script src="static/isotope.pkgd.min.js"></script>
+        <script src="static/custom.js"></script>
+        <script src="static/script.js"></script>
+        <script src="static/cookieCheck.js"></script>
+    </body>
 </html>
 
 
