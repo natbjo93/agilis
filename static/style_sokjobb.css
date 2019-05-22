@@ -41,7 +41,7 @@
     padding: 2%;
 }
 
-#btn1, #no_btn {
+#btn_1, #no_btn {
     display: inline-block;
     margin: 6px;
     font-size: inherit;
@@ -64,7 +64,7 @@
 }
 
 
-#btn1:hover, #no_btn:hover {
+#btn_1:hover, #no_btn:hover {
 transform: scale(1.02);
 box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.345);
 }

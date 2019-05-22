@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/cv_personligt_brev.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/kontakt.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/kontakt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_sokjobb.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_sokjobb.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/sokjobb.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/sokjobb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sparade_cv_pb.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/sparade_cv_pb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -336,7 +328,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1232" height="724" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18331957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

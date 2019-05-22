@@ -146,13 +146,13 @@ function getJobAndDisplay(annonsid) {
 }
 
 // Renderar första jobbet vid inladdning av sidan
-const firstJob = JSON.parse($('#btn1').attr('api_response')).matchningslista.matchningdata[0];
+const firstJob = JSON.parse($('#btn_1').attr('api_response')).matchningslista.matchningdata[0];
 
 getJobAndDisplay(firstJob.annonsid);
 
 $(function () {
   $("#no_btn").on('click', function(e, variable) {
-    apiResponseObject = JSON.parse($(btn1).attr('api_response'));
+    apiResponseObject = JSON.parse($(btn_1).attr('api_response'));
     jobList = apiResponseObject.matchningslista.matchningdata;
 
     // använd data-CurrentIndex för att lagra lokal variabel, som är var i jobblistan vi hämtar id
