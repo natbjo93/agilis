@@ -104,6 +104,9 @@ def signout():
 
 @route("/profil")
 def profil():
+    '''
+    Profil med cookies
+    '''
     username = request.get_cookie('account', secret='123')
     if username:
         cursor.execute("select first_name, last_name, email, profile_pic from profil where email= '" + (username) + "'")
