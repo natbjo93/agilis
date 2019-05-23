@@ -61,10 +61,13 @@
                             <div id="letters_display_div">
                                 <h3>Sparade</h3>
                                 <ul>
-                                    <li>Mitt CV:</li>
-                                    <li>Mina personliga brev:</li>
-                                    <li>Mina sparade jobb</li>
-                                    <li><a href="./sparade_cv_pb">Mina sparade CV och Personligt brev</a></li>
+                                    <li onclick="displayCV(this)">Mitt CV<p id="display_CV" hidden>{{ cv }}</p></li>
+                                    <p>Mina personliga brev:</p>
+                                    <ul>
+                                        <li id="display_PB" pb_data="{{ pb_data }}"></li>
+                                    </ul>
+                                    <!-- <li>Mina sparade jobb</li> -->
+                                    <!-- <li><a href="./sparade_cv_pb">Mina sparade CV och Personligt brev</a></li>  -->
                                 </ul>
                             </div>
                             <div id="letters_upload_div">
@@ -84,6 +87,8 @@
                                         <span class="closePB">&times;</span>
                                         <form enctype="multipart/form-data" action="/uploadpb" method="POST">
                                             <p>File: <input type="file" name="filename" /> </p>
+                                            <label for="pb_namn">Namn för personliga brev:</label>
+                                            <input type="text" id="pb_namn" name="pb_namn">
                                             <p><input type="submit" value="Ladda upp pdf" /> </p>
                                         </form>
                                     </div>
@@ -139,5 +144,6 @@
         <script src="static/custom.js"></script>
         <script src="static/script.js"></script>
         <script src="static/cookieCheck.js"></script>
+        <script src="static/profile_file_scripts.js"></script>
     </body>
 </html>

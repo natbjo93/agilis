@@ -1,3 +1,4 @@
+
 // Dess två funktioner hanterar att lösenordet visas som tecken eller ***
 function asterixPassword() {
   var x = document.getElementById("password");

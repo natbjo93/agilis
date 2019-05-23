@@ -9,23 +9,18 @@ function getCookie(name) {
 }
   
 if(getCookie('account')) {
-  console.log('account')
   $("#login_or_logout").attr("href", "/signout");
   $("#login_or_logout").html("Logga ut");
-  console.log($("#login_or_logout"));
 } else {
   $("#login_or_logout").attr("href", "/login");
   $("#login_or_logout").html("Logga in/registrera dig");
 }
 
 var profile_pic = $("#profilbild").attr('src');
-console.log(profile_pic)
 
 if (profile_pic == 'None'){
-$("#profilbild").attr("src", "static/default_profile_pic.png");
-console.log('hej')
+  $("#profilbild").attr("src", "static/default_profile_pic.png");
 }
 else {
-$("#profilbild").attr("src", profile_pic);
-console.log(profile_pic)  
+  $("#profilbild").attr("src", profile_pic);
 }
