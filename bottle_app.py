@@ -4,6 +4,7 @@ import psycopg2
 import requests
 import os
 import uuid
+import time
 
 conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
@@ -51,6 +52,10 @@ def cv():
 def sparade_cv_pb():
     return template("sparade_cv_pb", root="static")
 
+@route("/register_sucess")
+def register_sucess():
+    return template("register_sucess", root="static")
+
 @route("/check_login", method="POST")
 def check_login():
     '''
@@ -81,6 +86,7 @@ def register():
     query = "insert into profil(email, first_name, last_name, losen) values (%s, %s, %s, %s)"
     cursor.execute(query, [str(email), str(first_name), str(last_name), str(password)])
     conn.commit()
+    return template("register_sucess", root="static")
     return template("login", root="static")
 
 @route("/sokjobb")
