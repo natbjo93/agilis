@@ -19,6 +19,7 @@ create table personligabrev
  pb	         varchar(255),
  primary key (id),
  foreign key (email) references profil(email));
+ 
 /*eventuellt skicka med en url länk för jobbet man har sparat */
 create table sparadejobb
 (email      varchar(255),

@@ -35,6 +35,22 @@ def server_static(filepath):
 def login():
     return template("login", root="static")
 
+@route("/kontakt")
+def kontakt():
+    return template("kontakt", root="static")
+
+@route("/info")
+def info():
+    return template("info", root="static")
+
+@route("/cv_personligt_brev")
+def cv():
+    return template("cv_personligt_brev", root="static")
+
+@route("/sparade_cv_pb")
+def sparade_cv_pb():
+    return template("sparade_cv_pb", root="static")
+
 @route("/check_login", method="POST")
 def check_login():
     '''
@@ -86,14 +102,6 @@ def signout():
     response.delete_cookie('account')
     return redirect("/")
 
-@route("/kontakt")
-def kontakt():
-    return template("kontakt", root="static")
-
-@route("/info")
-def info():
-    return template("info", root="static")
-
 @route("/profil")
 def profil():
     username = request.get_cookie('account', secret='123')
@@ -111,6 +119,9 @@ def profil():
 
 @route("/uploadpic", method="POST")
 def uploadpic():
+    '''
+    Till för filuppladdning av bilder
+    '''
     user_email = request.get_cookie('account', secret="123")
     upload = request.files.get('filename')
     name, ext = os.path.splitext(upload.filename)
@@ -124,15 +135,6 @@ def uploadpic():
     cursor.execute("update profil set profile_pic = '{}' where email = '{}'".format(file_path, user_email))
     conn.commit()
     return redirect("/profil")
-
-@route("/cv_personligt_brev")
-def cv():
-    return template("cv_personligt_brev", root="static")
-
-@route("/sparade_cv_pb")
-def sparade_cv_pb():
-    
-    return template("sparade_cv_pb", root="static")
 
 @route("/uploadcv", method="POST")
 def uploadcv():
@@ -164,7 +166,6 @@ def change_pw():
     password = getattr(request.forms, "password")
     cursor.execute("update profil set losen = '{}' where email = '{}'".format(password, user_email))
     conn.commit()
-
     return redirect("/profil")
 
 run(host="localhost", port=8089, reloader=True)
