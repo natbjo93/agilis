@@ -9,6 +9,26 @@ import time
 conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
 
+def get_pbs_names():
+    username = request.get_cookie('account', secret='123')
+    cursor.execute("select pb_namn from personligabrev where email= '" + (username) + "'")
+    pb_fetch = cursor.fetchall()
+    pb_names = []
+    for i in pb_fetch:
+        pb_names.append(i[0])
+    print(pb_names)
+    return pb_names
+
+def get_pbs_location():
+    username = request.get_cookie('account', secret='123')
+    cursor.execute("select pb from personligabrev where email= '" + (username) + "'")
+    pb_fetch = cursor.fetchall()
+    pb_locations = []
+    for i in pb_fetch:
+        pb_locations.append(i[0])
+    print(pb_locations)
+    return pb_locations
+
 def api_response():
     '''
     Hämtar API från arbetsförmedlingen och lägger i en jsonfil
@@ -115,14 +135,20 @@ def profil():
     '''
     username = request.get_cookie('account', secret='123')
     if username:
-        cursor.execute("select first_name, last_name, email, profile_pic from profil where email= '" + (username) + "'")
+        cursor.execute("select first_name, last_name, email, profile_pic, cv from profil where email= '" + (username) + "'")
         namelist = cursor.fetchone()
-        print(namelist)
         first_name = namelist[0]
         last_name = namelist[1]
         email = namelist[2]
         profile_pic = namelist[3]
-        return template("profil", root="static", first_name = first_name, last_name = last_name, email = email, profile_pic = profile_pic)
+        cv = namelist[4]
+        pb_names = get_pbs_names()
+        pb_locations = get_pbs_location()
+        pb_data = {
+            'names': pb_names,
+            'locations': pb_locations
+        }
+        return template("profil", root="static", first_name = first_name, last_name = last_name, email = email, profile_pic = profile_pic, cv = cv, pb_data = json.dumps(pb_data))
     else:
         return redirect("/login")
 
@@ -163,6 +189,28 @@ def uploadcv():
     file_path = "{path}/{file}".format(path=save_path, file=name + ext)
     upload.save(file_path)
     cursor.execute("update profil set cv = '{}' where email = '{}'".format(file_path, user_email))
+    conn.commit()
+    return redirect("/profil")
+
+@route("/uploadpb", method="POST")
+def uploadpb():
+    '''
+    Till för filuppladdning av Personliga brev
+    '''
+    user_email = request.get_cookie('account', secret="123")
+    pb_namn = getattr(request.forms, "pb_namn")
+    upload = request.files.get('filename')
+    name, ext = os.path.splitext(upload.filename)
+    name = str(uuid.uuid4())
+    print(name)
+    if ext not in ('.pdf'):
+        return "File extension not allowed."
+    save_path = "static/uploads/{}".format(user_email)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    file_path = "{path}/{file}".format(path=save_path, file=name + ext)
+    upload.save(file_path)
+    cursor.execute("insert into personligabrev(id, email, pb, pb_namn) values ('{}', '{}', '{}', '{}')".format(uuid.uuid4(), user_email, file_path, pb_namn))
     conn.commit()
     return redirect("/profil")
 

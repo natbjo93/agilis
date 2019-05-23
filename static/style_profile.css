@@ -101,3 +101,7 @@ hr {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+li {
+    color: rgb(17, 17, 176);
+}

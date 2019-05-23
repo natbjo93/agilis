@@ -17,6 +17,7 @@ create table personligabrev
 (id          varchar(255),
  email	     varchar(255),
  pb	         varchar(255),
+ pb_namn	 varchar(255),
  primary key (id),
  foreign key (email) references profil(email));
  
@@ -25,3 +26,8 @@ create table sparadejobb
 (email      varchar(255),
 annonsrubrik  varchar(255),
 primary key (email, annonsrubrik));
+
+
+
+
+alter table personligabrev add column pb_namn varchar(255) NULL;
