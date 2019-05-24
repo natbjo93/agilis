@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/profile_file_scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/ralph@hotmail.com/48b648b8-1053-463c-8922-e870729b0b8e.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/ralph@hotmail.com/Agilis.poster.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/ralph@hotmail.com/VoVdokument_mall_vt17.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/ralph@hotmail.com/db239258-2d2c-46f2-a6d3-fe2085b90fbc.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agilis_databas_tabell.sql" beforeDir="false" afterPath="$PROJECT_DIR$/agilis_databas_tabell.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/cookieCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/cookieCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register_sucess.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/register_sucess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/sokjobb.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/sokjobb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +93,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="234" />
           <entry key="js" value="32" />
-          <entry key="py" value="5299" />
+          <entry key="py" value="5306" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
@@ -111,7 +102,7 @@
           <entry key="HTML" value="234" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="5299" />
+          <entry key="Python" value="5306" />
         </counts>
       </usages-collector>
     </session>
@@ -121,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottle_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="290">
+              <caret line="227" column="31" selection-start-line="227" selection-start-column="31" selection-end-line="227" selection-end-column="31" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -503,8 +494,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottle_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="290">
+          <caret line="227" column="31" selection-start-line="227" selection-start-column="31" selection-end-line="227" selection-end-column="31" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>

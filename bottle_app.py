@@ -107,7 +107,7 @@ def register():
     cursor.execute(query, [str(email), str(first_name), str(last_name), str(password)])
     conn.commit()
     return template("register_sucess", root="static")
-    return template("login", root="static")
+
 
 @route("/sokjobb")
 def sok_jobb():
@@ -160,7 +160,7 @@ def uploadpic():
     user_email = request.get_cookie('account', secret="123")
     upload = request.files.get('filename')
     name, ext = os.path.splitext(upload.filename)
-    if ext not in ('.jpg'):
+    if ext not in ('.jpg, .png'):
         return "File extension not allowed."
     save_path = "static/uploads/{}".format(user_email)
     if not os.path.exists(save_path):
@@ -225,5 +225,5 @@ def change_pw():
     conn.commit()
     return redirect("/profil")
 
-run(host="localhost", port=8089, reloader=True)
+run(host="localhost", port=8088, reloader=True)
 
