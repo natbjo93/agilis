@@ -104,4 +104,5 @@ hr {
 
 li {
     color: rgb(17, 17, 176);
+    text-decoration: underline;
 }
