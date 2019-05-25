@@ -76,7 +76,8 @@
                                     <div class="modal-content">
                                         <span class="closeCV">&times;</span>
                                         <form enctype="multipart/form-data" action="/uploadcv" method="POST">
-                                            <p>File: <input type="file" name="filename" /> </p>
+                                            <p>File: <input type="file" name="filename" accept="application/pdf"/> </p>
+                                            <p>Endast PDF-filer</p>
                                             <p><input type="submit" value="Ladda upp pdf" /> </p>
                                         </form>
                                     </div>
@@ -86,7 +87,8 @@
                                     <div class="modal-content">
                                         <span class="closePB">&times;</span>
                                         <form enctype="multipart/form-data" action="/uploadpb" method="POST">
-                                            <p>File: <input type="file" name="filename" /> </p>
+                                            <p>File: <input type="file" name="filename" accept="application/pdf"/> </p>
+                                            <p>Endast PDF-filer</p>
                                             <label for="pb_namn">Namn för personliga brev:</label>
                                             <input type="text" id="pb_namn" name="pb_namn">
                                             <p><input type="submit" value="Ladda upp pdf" /> </p>
@@ -104,8 +106,9 @@
                             <div class="modal-content">
                                 <span class="closePIC">&times;</span>
                                 <form enctype="multipart/form-data" action="/uploadpic" method="POST">
-                                    <p>File: <input type="file" name="filename" /> </p>
-                                    <p><input type="submit" value="Ladda upp bild" /> </p>
+                                    <p>File: <input type="file" name="filename" accept="image/*"/></p>
+                                    <p>Endast JPG/JPEG/PNG-filer</p>
+                                    <p><input type="submit" value="Ladda upp bild" /></p>
                                 </form>
                             </div>
                         </div>

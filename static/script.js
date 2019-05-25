@@ -82,7 +82,6 @@ window.onclick = function(event) {
   }
 }
 
-
 /* Jobbknappar att stanna vid scroll */
 function sticktothetop() {
   var window_top = $(window).scrollTop();
@@ -140,8 +139,6 @@ function getJobAndDisplay(annonsid) {
       $('#apply').attr('action', result.platsannons.ansokan.webbplats);
       $('#webbplats').fadeOut('fast', function() {
         $(this).text("Ansök via:" + "\n" + result.platsannons.ansokan.webbplats).fadeIn('fast');
-        // Denna sista bit måste sitta på sista paragrafen
-        // $(this).removeProp('disabled');
       });
     }});
 }
