@@ -1,58 +1,63 @@
 /* 
 INFORMATIONSSIDANS CSS 
 */
-
-.flip_card_container {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-
-}
-
-.flip_card {
-    background-color: transparent;
-    width:225px;
-    height:250px;
-    perspective: 1000px;
-    display: block;
-  }
-
-  
-.flip_card_inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-.flip_card:hover .flip_card_inner {
-    transform: rotateY(180deg);
-  }
-  
-.flip_card_front, .flip_card_back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-.flip_card_front {
-    background-color: #ffbf00;
-    color: black;
-    z-index: 2;
-  }
-  
-.flip_card_back {
-    background-color:#ffbf00;
-    color: white;
-    transform: rotateY(180deg);
-    z-index: 1;
-  }
-
 .about_us_pic {
   width:225px;
   height:250px;
+}
+
+/* */
+.about_us_container {
+  position: relative;
+  width:225px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.605);
+}
+
+.about_us_container:hover .overlay {
+  opacity: 1;
+}
+
+.text_container {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#container_all_about_us {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+
+.about_us_h3 {
+  color: white;
+}
+
+h3 {
+  text-align: center;
 }

@@ -106,3 +106,7 @@ li {
     color: rgb(17, 17, 176);
     text-decoration: underline;
 }
+
+li:hover {
+    cursor: pointer;
+}

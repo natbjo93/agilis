@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/sokjobb.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/sokjobb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +95,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="234" />
           <entry key="js" value="32" />
-          <entry key="py" value="5306" />
+          <entry key="py" value="5307" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
@@ -99,7 +104,7 @@
           <entry key="HTML" value="234" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="5306" />
+          <entry key="Python" value="5307" />
         </counts>
       </usages-collector>
     </session>
@@ -109,7 +114,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottle_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="369">
               <caret line="227" column="31" selection-start-line="227" selection-start-column="31" selection-end-line="227" selection-end-column="31" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
@@ -491,7 +496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottle_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
+        <state relative-caret-position="369">
           <caret line="227" column="31" selection-start-line="227" selection-start-column="31" selection-end-line="227" selection-end-column="31" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
