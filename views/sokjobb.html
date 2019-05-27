@@ -51,6 +51,30 @@
     </div>
     <div class="container main-container clearfix"> 
         <h2>Sök Jobb</h2>
+        <select id="Category_select">
+            <option value="-1" selected>Alla yrken</option>
+            <option value="1">Administration, ekonomi, juridik</option>
+            <option value="2">Bygg och anläggning</option>
+            <option value="20">Chefer och verksamhetsledare</option>
+            <option value="3">Data/IT</option>
+            <option value="5">Försäljning, inköp, marknadsföring</option>
+            <option value="6">Hantverksyrken</option>
+            <option value="7">Hotell, restaurang, storhushåll</option>
+            <option value="8">Hälso- och sjukvård</option>
+            <option value="9">Industriell tillverkning</option>
+            <option value="10">Installation, drift, underhåll</option>
+            <option value="3">Kropps- och skönhetsvård</option>
+            <option value="11">Kultur, media, design</option>
+            <option value="22">Militärt arbete</option>
+            <option value="13">Naturbruk</option>
+            <option value="14">Naturvetenskapligt arbete</option>
+            <option value="15">Pedagogiskt arbete/option>
+            <option value="12">Sanering och renhållning</option>
+            <option value="16">Socialt arbete</option>
+            <option value="17">Säkerhetsarbete</option>
+            <option value="18">Tekniskt arbete</option>
+            <option value="19">Transport</option>
+        </select>
         <div id="outside_job_div">
             <div id="job_search">
                 <div id="entire_job_div">
@@ -77,7 +101,7 @@
             <div id="stick-here"></div>
             <div id="buttons_div">
                 <form id="apply" target="_blank">
-                    <input type="submit" value="Ansök" id="btn_1" api_response="{{api_response}}">   
+                    <input type="submit" value="Ansök" id="btn_1">   
                 </form>
                 <button id="no_btn">Nästa jobb</button>
                     <!-- <button id="no_btn">Spara Jobb</button>
@@ -100,6 +124,7 @@
     <script src="static/custom.js"></script>
     <script src="static/script.js"></script>
     <script src="static/cookieCheck.js"></script>
+    <script src="static/job_script.js"></script>
 </body>
 
 </html>
