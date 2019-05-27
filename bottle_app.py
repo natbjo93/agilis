@@ -116,7 +116,8 @@ def sok_jobb():
     '''
     username = request.get_cookie('account', secret='123')
     if username:
-        return template("sokjobb", root="static", api_response=api_response())
+        # return template("sokjobb", root="static", api_response=api_response())
+        return template("sokjobb", root="static")
     else:
         return redirect("/login")
 
@@ -225,5 +226,5 @@ def change_pw():
     conn.commit()
     return redirect("/profil")
 
-run(host="localhost", port=8089, reloader=True)
+run(host="localhost", port=8086, reloader=True)
 
