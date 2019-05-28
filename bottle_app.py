@@ -10,6 +10,9 @@ conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", ho
 cursor = conn.cursor()
 
 def get_pbs_names():
+    '''
+    Hämtar personliga brev från rätt användare?
+    '''
     username = request.get_cookie('account', secret='123')
     cursor.execute("select pb_namn from personligabrev where email= '" + (username) + "'")
     pb_fetch = cursor.fetchall()
@@ -20,6 +23,9 @@ def get_pbs_names():
     return pb_names
 
 def get_pbs_location():
+    '''
+    Hämtar personliga brev från cookie?
+    '''
     username = request.get_cookie('account', secret='123')
     cursor.execute("select pb from personligabrev where email= '" + (username) + "'")
     pb_fetch = cursor.fetchall()
