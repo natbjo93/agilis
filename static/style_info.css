@@ -1,6 +1,15 @@
 /* 
 INFORMATIONSSIDANS CSS 
 */
+@media screen and (max-width: 540px) {
+
+
+
+a {
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
 .about_us_pic {
   width:225px;
   height:250px;
@@ -60,4 +69,5 @@ INFORMATIONSSIDANS CSS
 
 h3 {
   text-align: center;
+} 
 }
