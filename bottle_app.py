@@ -4,14 +4,13 @@ import psycopg2
 import requests
 import os
 import uuid
-import time
 
 conn = psycopg2.connect(dbname="agilis", user="ai9707" , password="gpvfieda", host="pgserver.mah.se")
 cursor = conn.cursor()
 
 def get_pbs_names():
     '''
-    Hämtar personliga brev från rätt användare?
+    Hämtar personliga brevs namn för inloggad användare
     '''
     username = request.get_cookie('account', secret='123')
     cursor.execute("select pb_namn from personligabrev where email= '" + (username) + "'")
@@ -24,27 +23,16 @@ def get_pbs_names():
 
 def get_pbs_location():
     '''
-    Hämtar personliga brev från cookie?
+    Hämtar personliga brev path för inloggad användare
     '''
     username = request.get_cookie('account', secret='123')
-    cursor.execute("select pb from personligabrev where email= '" + (username) + "'")
+    cursor.execute("select pb from personligabrev where email = '" + (username) + "'")
     pb_fetch = cursor.fetchall()
     pb_locations = []
     for i in pb_fetch:
         pb_locations.append(i[0])
     print(pb_locations)
     return pb_locations
-
-def api_response():
-    '''
-    Hämtar API från arbetsförmedlingen och lägger i en jsonfil
-    '''
-    res = requests.get('https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=12&sida=1&antalrader=100', headers={'Accept-language': 'application/json'})
-    if res.status_code != 200:
-        raise Exception("ERROR")
-    api_res = json.dumps(res.json())
-    print(api_res)
-    return api_res
 
 @route("/")
 def index():
@@ -90,7 +78,7 @@ def check_login():
     try:
         username = getattr(request.forms ,"username")
         password = getattr(request.forms, "password")
-        cursor.execute("select losen from profil where email= '" + (username) + "'")
+        cursor.execute("select losen from profil where email = '" + (username) + "'")
         database_password = cursor.fetchone()
         if database_password[0] == password:
             response.set_cookie('account', username, secret= '123')
@@ -118,11 +106,10 @@ def register():
 @route("/sokjobb")
 def sok_jobb():
     '''
-    Ser till så användaren är inloggad med hjälp av cookies, samt skickar med API med jobb så JavaScript kan arbeta med den
+    Ser till så att användaren är inloggad med hjälp av cookies, sen visar upp jobb genom Javascripten
     '''
     username = request.get_cookie('account', secret='123')
     if username:
-        # return template("sokjobb", root="static", api_response=api_response())
         return template("sokjobb", root="static")
     else:
         return redirect("/login")
@@ -138,11 +125,11 @@ def signout():
 @route("/profil")
 def profil():
     '''
-    Profil med cookies
+    Profil med cookies. Massor variabler som skickas med för användarens information ska visas på profilen
     '''
     username = request.get_cookie('account', secret='123')
     if username:
-        cursor.execute("select first_name, last_name, email, profile_pic, cv from profil where email= '" + (username) + "'")
+        cursor.execute("select first_name, last_name, email, profile_pic, cv from profil where email = '" + (username) + "'")
         namelist = cursor.fetchone()
         first_name = namelist[0]
         last_name = namelist[1]

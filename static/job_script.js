@@ -114,7 +114,7 @@ function callback(result) {
   // Här börjar all kod som hanterar API requesten och skriver ut information
 function getJobAndDisplay(annonsid) {
     const url = 'https://api.arbetsformedlingen.se/af/v0/platsannonser/' + annonsid;
-  
+    console.log(annonsid)
     $.ajax({
       url: url,
       type: "GET",
