@@ -4,8 +4,10 @@
     <list default="true" id="bb306d73-49d7-4590-8bae-a5710609daa9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bottle_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottle_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/job_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/job_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/info.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,13 +62,14 @@
         <counts>
           <entry key="project.closed" value="14" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -93,7 +96,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="234" />
           <entry key="js" value="32" />
-          <entry key="py" value="5536" />
+          <entry key="py" value="5539" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
@@ -102,7 +105,7 @@
           <entry key="HTML" value="234" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="5536" />
+          <entry key="Python" value="5539" />
         </counts>
       </usages-collector>
     </session>
@@ -112,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottle_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2302">
-              <caret line="154" column="42" lean-forward="true" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
+            <state relative-caret-position="365">
+              <caret line="221" column="31" selection-start-line="221" selection-start-column="31" selection-end-line="221" selection-end-column="31" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -170,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,7 +195,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,14 +358,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="26" width="1232" height="724" extended-state="0" />
+    <frame x="3" y="30" width="1232" height="724" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18331957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30063292" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,8 +526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottle_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2302">
-          <caret line="154" column="42" lean-forward="true" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
+        <state relative-caret-position="365">
+          <caret line="221" column="31" selection-start-line="221" selection-start-column="31" selection-end-line="221" selection-end-column="31" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>

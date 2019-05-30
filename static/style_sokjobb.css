@@ -1,4 +1,5 @@
 /* JOBBSIDA */
+
 #outside_job_div {
     display: flex;
     flex-flow: row;
@@ -31,11 +32,13 @@
     display: flex;
     justify-content: flex-start;
 }
+
 .job_info_div {
     margin-left: 2%;
     border-left: 1px solid black;
     padding-left: 2%;
 }
+
 #info_div {
     border: 1px solid black;
     padding: 2%;
@@ -62,7 +65,6 @@
     color: #252730;
     background-color: #ffbf00;
 }
-
 
 #btn_1:hover, #no_btn:hover {
 transform: scale(1.02);

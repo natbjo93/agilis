@@ -1,10 +1,4 @@
-/* 
-INFORMATIONSSIDANS CSS 
-*/
-@media screen and (max-width: 540px) {
-
-
-
+/* INFORMATIONSSIDANS CSS */
 a {
     -webkit-transition: all .3s;
     transition: all .3s
@@ -13,6 +7,7 @@ a {
 .about_us_pic {
   width:225px;
   height:250px;
+  margin: 2%;
 }
 
 /* */
@@ -60,6 +55,7 @@ a {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 2%;
 }
 
@@ -70,4 +66,20 @@ a {
 h3 {
   text-align: center;
 } 
+
+p {
+  text-align: center;
+}
+
+.col-md-6 {
+  margin: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+  #container_all_about_us {
+      display: flex;
+      flex-flow: column;
+      
+  }
 }

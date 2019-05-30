@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agilis</title>
-    <link rel="icon" href="static/logo.png" type="icon">
-    <link href="static/bootstrap.min.css" rel="stylesheet">
-    <link href="static/ionicons.min.css" rel="stylesheet">
-    <link href="static/style.css" rel="stylesheet">
-    <link href="static/style_sokjobb.css" rel="stylesheet">
-    <script src="static/modernizr.js"></script>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-</head>
-<body>
-    <div id="preloader">
-        <div class="pre-container">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Agilis</title>
+        <link rel="icon" href="static/logo.png" type="icon">
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <link href="static/ionicons.min.css" rel="stylesheet">
+        <link href="static/style.css" rel="stylesheet">
+        <link href="static/style_sokjobb.css" rel="stylesheet">
+        <script src="static/modernizr.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    </head>
+    <body>
+        <div id="preloader">
+            <div class="pre-container">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
-            </div>
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Meny</span><span class="box-menu-icon"></span>
-            </a>
-        </header>
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label">Agilis</li>
-                <li><a href="./">Startsida</a></li>
-                <li><a href="./profil">Profil</a></li>
-                <li><a href="./sokjobb">Sök jobb</a></li>
-                <li><a href="./info">Om Oss</a></li>
-                <li><a href="./kontakt">Kontakt</a></li>
-                <li><a id="login_or_logout" href="./login">Logga ut</a></li>
-            </ul>
-        </nav>
-    <div class="top-bar">
-        <h1>Sök jobb</h1>
-        <p><a href="./">Hem</a> / Om Oss</p>
-    </div>
-    <div class="container main-container clearfix"> 
-        <h2>Sök Jobb</h2>
-        <select id="Category_select">
-            <option value="-1" selected>Alla yrken</option>
-            <option value="1">Administration, ekonomi, juridik</option>
-            <option value="2">Bygg och anläggning</option>
-            <option value="20">Chefer och verksamhetsledare</option>
-            <option value="3">Data/IT</option>
-            <option value="5">Försäljning, inköp, marknadsföring</option>
-            <option value="6">Hantverksyrken</option>
-            <option value="7">Hotell, restaurang, storhushåll</option>
-            <option value="8">Hälso- och sjukvård</option>
-            <option value="9">Industriell tillverkning</option>
-            <option value="10">Installation, drift, underhåll</option>
-            <option value="3">Kropps- och skönhetsvård</option>
-            <option value="11">Kultur, media, design</option>
-            <option value="22">Militärt arbete</option>
-            <option value="13">Naturbruk</option>
-            <option value="14">Naturvetenskapligt arbete</option>
-            <option value="15">Pedagogiskt arbete/option>
-            <option value="12">Sanering och renhållning</option>
-            <option value="16">Socialt arbete</option>
-            <option value="17">Säkerhetsarbete</option>
-            <option value="18">Tekniskt arbete</option>
-            <option value="19">Transport</option>
-        </select>
-        <div id="outside_job_div">
-            <div id="job_search">
-                <div id="entire_job_div">
-                    <h2 id="annonsrubrik"></h2>
-                    <p id="yrkesbenamning"></p>
-                    <p id="annonstext"></p>
-                    <p id="kommunnamn"></p>
-                    <div id="info_div">
-                        <div id="job_time_div">
-                            <p id="varaktighet"></p>
-                            <p id="arbetstid"></p>
-                        </div>
-                        <div class="job_info_div">
-                            <p id="lonetyp"></p>
-                            <p id="loneform"></p>
-                        </div>
-                        <div class="job_info_div">
-                            <p id="sista_ansokningsdag"></p>
-                            <p id="webbplats"></p>
+        <div class="container-fluid">
+            <header class="box-header">
+                <div class="box-logo">
+                    <a href="./"><img src="static/logo.png" width="80" alt="Logo"></a>
+                </div>
+                <a class="box-primary-nav-trigger" href="#0">
+                    <span class="box-menu-text">Meny</span><span class="box-menu-icon"></span>
+                </a>
+            </header>
+            <nav>
+                <ul class="box-primary-nav">
+                    <li class="box-label">Agilis</li>
+                    <li><a href="./">Startsida</a></li>
+                    <li><a href="./profil">Profil</a></li>
+                    <li><a href="./sokjobb">Sök jobb</a></li>
+                    <li><a href="./info">Om Oss</a></li>
+                    <li><a href="./kontakt">Kontakt</a></li>
+                    <li><a id="login_or_logout" href="./login">Logga ut</a></li>
+                </ul>
+            </nav>
+        <div class="top-bar">
+            <h1>Sök jobb</h1>
+            <p><a href="./">Hem</a> / Om Oss</p>
+        </div>
+        <div class="container main-container clearfix"> 
+            <h2>Sök Jobb</h2>
+            <select id="Category_select">
+                <option value="-1" selected>Alla yrken</option>
+                <option value="1">Administration, ekonomi, juridik</option>
+                <option value="2">Bygg och anläggning</option>
+                <option value="20">Chefer och verksamhetsledare</option>
+                <option value="3">Data/IT</option>
+                <option value="5">Försäljning, inköp, marknadsföring</option>
+                <option value="6">Hantverksyrken</option>
+                <option value="7">Hotell, restaurang, storhushåll</option>
+                <option value="8">Hälso- och sjukvård</option>
+                <option value="9">Industriell tillverkning</option>
+                <option value="10">Installation, drift, underhåll</option>
+                <option value="3">Kropps- och skönhetsvård</option>
+                <option value="11">Kultur, media, design</option>
+                <option value="22">Militärt arbete</option>
+                <option value="13">Naturbruk</option>
+                <option value="14">Naturvetenskapligt arbete</option>
+                <option value="15">Pedagogiskt arbete/option>
+                <option value="12">Sanering och renhållning</option>
+                <option value="16">Socialt arbete</option>
+                <option value="17">Säkerhetsarbete</option>
+                <option value="18">Tekniskt arbete</option>
+                <option value="19">Transport</option>
+            </select>
+            <div id="outside_job_div">
+                <div id="job_search">
+                    <div id="entire_job_div">
+                        <h2 id="annonsrubrik"></h2>
+                        <p id="yrkesbenamning"></p>
+                        <p id="annonstext"></p>
+                        <p id="kommunnamn"></p>
+                        <div id="info_div">
+                            <div id="job_time_div">
+                                <p id="varaktighet"></p>
+                                <p id="arbetstid"></p>
+                            </div>
+                            <div class="job_info_div">
+                                <p id="lonetyp"></p>
+                                <p id="loneform"></p>
+                            </div>
+                            <div class="job_info_div">
+                                <p id="sista_ansokningsdag"></p>
+                                <p id="webbplats"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="stick-here"></div>
+                <div id="buttons_div">
+                    <form id="apply" target="_blank">
+                        <input type="submit" value="Ansök" id="btn_1">   
+                    </form>
+                    <button id="no_btn">Nästa jobb</button>
+                        <!-- <button id="no_btn">Spara Jobb</button>
+                        <button id="no_btn">Avbryt</button> -->
+                </div>
             </div>
-            <div id="stick-here"></div>
-            <div id="buttons_div">
-                <form id="apply" target="_blank">
-                    <input type="submit" value="Ansök" id="btn_1">   
-                </form>
-                <button id="no_btn">Nästa jobb</button>
-                    <!-- <button id="no_btn">Spara Jobb</button>
-                    <button id="no_btn">Avbryt</button> -->
+        <br>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">@AgilisAB</p>
+                Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.
             </div>
-        </div>
-    <br>
-    <footer>
-        <div class="container-fluid">
-            <p class="copyright">@AgilisAB</p>
-            Klicka på <a href="./kontakt">Kontakt</a> ifall du har några frågor till Agilis.
-        </div>
-    </footer>
-    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
-    <script src="static/jquery-2.1.1.js"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/menu.js"></script>
-    <script src="static/animated-headline.js"></script>
-    <script src="static/isotope.pkgd.min.js"></script>
-    <script src="static/custom.js"></script>
-    <script src="static/script.js"></script>
-    <script src="static/cookieCheck.js"></script>
-    <script src="static/job_script.js"></script>
-</body>
+        </footer>
+        <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+        <script src="static/jquery-2.1.1.js"></script>
+        <script src="static/bootstrap.min.js"></script>
+        <script src="static/menu.js"></script>
+        <script src="static/animated-headline.js"></script>
+        <script src="static/isotope.pkgd.min.js"></script>
+        <script src="static/custom.js"></script>
+        <script src="static/script.js"></script>
+        <script src="static/cookieCheck.js"></script>
+        <script src="static/job_script.js"></script>
+    </body>
 </html>
 
 
