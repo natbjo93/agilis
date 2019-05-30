@@ -30,4 +30,4 @@ primary key (email, annonsrubrik));
 
 
 
-alter table personligabrev add column pb_namn varchar(255) NULL;
+/*alter table personligabrev add column pb_namn varchar(255) NULL;
