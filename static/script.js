@@ -25,7 +25,6 @@ $("#CV_btn").on('click', function(e, variable) {
   modalCV.style.display = "block";
 });
 
-// When the user clicks on <span> (x), close the modal
 $('.closeCV').on('click', function () {
   modalCV.style.display = "none";
 }) 
@@ -35,12 +34,9 @@ var modalPB = document.getElementById("myModalPB");
 
 $("#PB_btn").on('click', function(e, variable) {
   $('#myModalPB').show()
-  // modalPB.style.display = "block";
 });
 
-// When the user clicks on <span> (x), close the modal
 $('.closePB').on('click', function () {
-  // modalCV.style.display = "none";
   $('#myModalPB').hide();
 }) 
 
@@ -51,7 +47,6 @@ $("#pic_btn").on('click', function(e, variable) {
   modalPIC.style.display = "block";
 });
 
-// When the user clicks on <span> (x), close the modal
 $('.closePIC').on('click', function () {
   $('#myModalPIC').hide();
 });
@@ -63,12 +58,11 @@ $("#PW_btn").on('click', function(e, variable) {
   modalPW.style.display = "block";
 });
 
-// When the user clicks on <span> (x), close the modal
 $('.closePW').on('click', function () {
   modalPW.style.display = "none";
 }) 
 
-// When the user clicks anywhere outside of the modal, close it
+// När användaren klickar utanför stängs filuppladdnings formen
 window.onclick = function(event) {
   if (event.target == $('#myModalCV')[0]) {
     modalCV.style.display = "none";

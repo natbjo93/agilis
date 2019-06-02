@@ -16,11 +16,4 @@ if(getCookie('account')) {
   $("#login_or_logout").html("Logga in/registrera dig");
 }
 
-var profile_pic = $("#profilbild").attr('src');
 
-if (profile_pic == 'None'){
-  $("#profilbild").attr("src", "static/default_profile_pic.png");
-}
-else {
-  $("#profilbild").attr("src", profile_pic);
-}
