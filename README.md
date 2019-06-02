@@ -14,7 +14,8 @@ Starta Agilis
 2. Starta upp bottle_app.py och exekvera koden
 3. Kopiera Localhost länken som kommer upp och klistra in i en webbläsare
 4. Nu ska du befinna dig på agilis första sida som är index.html
-5. Du kan logga in på agilis förstasida med redan befintligt konto
-5. Du kan skapa konto på agilis förstasida
-6. 
-https://github.com/natbjo93/agilis
+4. Är du ny användare på Agilis hemsida och vill söka jobb, behöver du registera dig som en användare
+5. Därefter kan du logga in och ladda upp CV, personligt brev och profilbild
+6. Om du redan har ett konto hos Agilis är det till att trycka på logga in knappen
+
+För att komma till Agilis git: https://github.com/natbjo93/agilis
